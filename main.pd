@@ -2,141 +2,17 @@
 array ltwo ltwo-e symbol stafftwo array lthree lthree-e symbol staffthree
 array lfour lfour-e symbol stafffour float w1 float w2 float w3 float
 w4 float width symbol stafffive symbol staffsix array lfive lfive-e
-float w5;
+float w5 float w6 array lsix lsix-e float w7 float a array lseven lseven-e
+;
 #N struct lone-e float w;
 #N struct ltwo-e float y float w;
 #N struct lthree-e float w;
 #N struct lfour-e float y float w;
-#N struct lfive-e float y float x;
-#N canvas 70 476 450 300 12;
-#N canvas 10 52 1765 407 score 1;
-#X scalar template 50 80 frl. voc. prs. sng. 201 115 39 67 1600 cb.
-dyn. 3 \; 0 \; 0 \; 2 \; 2 \; 3 \; 5 \; 5 \; 0 \; \; -4 0 \; 7 0 \;
-0 0 \; -4 0 \; 10 0 \; 0 0 \; -17 0 \; -8 0 \; 0 0 \; 0 0 \; -5 0 \;
-0 0 \; 4 0 \; -14 0 \; \; 0 \; 0 \; 0 \; 2 \; 0 \; 3 \; 0 \; 0 \; 0
-\; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \;
-0 \; 1 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 2 \; 0 \; 0
-\; 0 \; 0 \; 1 \; 0 \; 5 \; 1 \; \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 10 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; -19 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; -5 0 \; 0 0 \; 0 0 \; -18 0 \; -9
-0 \; \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; -18 1092 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; -19 428 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 9 269 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; -9 102 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
-0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
-\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
-0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 3 896 \; \;;
-#X coords 0 0 1 1 300 300 0;
-#X restore 14 9 pd score;
-#N canvas 708 281 1038 757 template 0;
-#X obj 28 620 drawsymbol staffsix -40 190 0;
-#X text 44 124 INSTRUMENT NAMES;
-#X text 593 127 STAFFLINES (5 LINES);
-#X text 297 128 INDIVIDUAL INSTRUMENT LINES;
-#X obj 552 261 drawpolygon 0 1 0 60 width 60;
-#X obj 552 241 drawpolygon 0 1 0 52 width 52;
-#X obj 552 281 drawpolygon 0 1 0 68 width 68;
-#X obj 551 301 drawpolygon 0 1 0 76 width 76;
-#X obj 552 221 drawpolygon 0 1 0 44 width 44;
-#X obj 299 244 plot ltwo 0 0 0 60 w2;
-#X obj 299 169 plot lone 0 0 0 20 w1;
-#X obj 299 369 plot lthree 0 0 0 95 w3;
-#X obj 299 474 plot curve lfour 0 0 0 110 w4;
-#X obj 227 418 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 253 329 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 268 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 244 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 563 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 21 16 struct template float x float y array lone lone-e symbol
-staffname array ltwo ltwo-e symbol stafftwo array lthree lthree-e symbol
-staffthree array lfour lfour-e symbol stafffour float w1 float w2 float
-w3 float w4 float width symbol stafffive symbol staffsix array lfive
-lfive-e float w5;
-#X obj 588 530 drawpolygon 0 1 0 144 width 144;
-#X obj 588 550 drawpolygon 0 1 0 152 width 152;
-#X obj 588 570 drawpolygon 0 1 0 160 width 160;
-#X obj 588 590 drawpolygon 0 1 0 168 width 168;
-#X obj 588 610 drawpolygon 0 1 0 176 width 176;
-#X obj 29 169 drawsymbol staffname -40 20 0;
-#X obj 29 244 drawsymbol stafftwo -40 60 0;
-#X obj 29 369 drawsymbol staffthree -40 95 0;
-#X obj 29 474 drawsymbol stafffour -40 110 0;
-#X obj 28 553 drawsymbol stafffive -40 160 0;
-#X obj 249 519 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 302 554 plot lfive 0 0 0 160 w5;
-#X connect 13 0 12 0;
-#X connect 13 0 27 0;
-#X connect 14 0 11 0;
-#X connect 14 0 26 0;
-#X connect 15 0 9 0;
-#X connect 15 0 25 0;
-#X connect 16 0 10 0;
-#X connect 16 0 24 0;
-#X connect 17 0 8 0;
-#X connect 17 0 5 0;
-#X connect 17 0 4 0;
-#X connect 17 0 6 0;
-#X connect 17 0 7 0;
-#X connect 29 0 28 0;
-#X connect 29 0 30 0;
-#X restore 34 32 pd template;
-#N canvas 561 477 451 299 init 0;
+#N struct lfive-e float x float y;
+#N struct lsix-e float y float w;
+#N struct lseven-e float x float y;
+#N canvas 825 455 449 299 12;
+#N canvas 371 455 451 299 init 1;
 #N canvas 0 23 450 300 setsymbols 0;
 #X obj 112 32 r template-p;
 #X obj 112 56 t b p;
@@ -157,29 +33,31 @@ stafffive staffsix, f 29;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X restore 21 16 pd score-p;
-#N canvas 124 507 450 300 template-p 0;
+#N canvas 124 474 450 300 template-p 0;
 #X obj 36 157 append template x y;
-#X msg 16 111 50 80;
 #X obj 36 59 t b p;
-#X text 191 223 <-- getting "template" pointer via [append], f 27
+#X text 153 210 <-- getting "template" pointer via [append], f 27
 ;
-#X obj 42 232 s template-p;
+#X obj 36 214 s template-p;
 #X obj 36 28 r score-p;
-#X connect 0 0 4 0;
-#X connect 1 0 0 0;
-#X connect 2 0 1 0;
-#X connect 2 1 0 2;
-#X connect 5 0 2 0;
+#X obj 152 98 r page-margins;
+#X obj 36 124 list append 80 20;
+#X connect 0 0 3 0;
+#X connect 1 0 6 0;
+#X connect 1 1 0 2;
+#X connect 4 0 1 0;
+#X connect 5 0 6 1;
+#X connect 6 0 0 0;
 #X restore 22 45 pd template-p;
-#N canvas 751 142 1083 1043 make-staff 0;
-#X obj 535 755 random 40;
-#X obj 535 779 - 20;
+#N canvas 197 23 1083 751 make-staff 0;
+#X obj 571 716 random 40;
+#X obj 571 740 - 20;
 #X obj 155 510 /;
-#X obj 219 838 t b f;
-#X obj 218 864 f;
-#X obj 255 865 + 0;
-#X msg 284 829 0;
-#X obj 213 807 random;
+#X obj 227 891 t b f;
+#X obj 226 917 f;
+#X obj 263 918 + 0;
+#X msg 292 882 0;
+#X obj 221 860 random;
 #X obj 155 638 set;
 #X msg 129 222 set template \$1;
 #X msg 129 197 symbol l\$1;
@@ -188,7 +66,7 @@ stafffive staffsix, f 29;
 #X obj 182 428 setsize;
 #X obj 235 398 r template-p;
 #X obj 176 612 r template-p;
-#X obj 266 70 t a a;
+#X obj 146 82 t a a;
 #X obj 88 139 list split 1;
 #X obj 553 226 list split 1;
 #X obj 155 560 pack;
@@ -203,55 +81,82 @@ stafffive staffsix, f 29;
 #X obj 129 247 t b a a a, f 42;
 #X obj 452 599 r template-p;
 #X obj 663 873 set;
-#X obj 266 16 r make-staff;
-#X obj 129 708 t f f f b, f 15;
-#X obj 115 754 until;
-#X obj 115 779 f;
-#X obj 115 804 + 1;
-#X obj 150 779 sel;
-#X obj 154 806 t f b;
-#X msg 56 781 0;
-#X obj 177 741 - 2;
+#X obj 146 28 r make-staff;
+#X obj 143 768 t f f f b, f 15;
+#X obj 123 807 until;
+#X obj 123 832 f;
+#X obj 123 857 + 1;
+#X obj 158 832 sel;
+#X obj 162 859 t f b;
+#X msg 64 834 0;
+#X obj 185 794 - 2;
 #X obj 155 535 fd_ceil;
 #X obj 581 53 r template-width;
 #X msg 623 662 symbol \$3;
 #X obj 658 761 list;
 #X msg 659 787 set \$1-e \$2;
 #X msg 773 551 w;
-#X obj 783 600 symbol;
-#X msg 842 557 y;
+#X obj 798 586 symbol;
+#X msg 820 551 y;
 #X obj 418 678 f;
-#X obj 534 731 b;
+#X obj 543 691 b;
 #X obj 419 785 random 6;
 #X obj 129 322 random 50;
-#X msg 266 44 1 one \, 2 two \, 3 three \, 4 four \, 5 five;
-#X obj 420 752 sel 1 3 5;
-#X obj 776 519 sel 1 3 5;
 #X obj 643 717 t a a;
-#X obj 350 913 random 40;
-#X obj 350 937 - 20;
+#X obj 596 918 random 40;
+#X obj 596 942 - 20;
 #X obj 386 873 t b b;
-#X obj 452 936 random 20;
-#X obj 336 582 t f f;
-#X obj 521 898 r template-width;
-#X obj 421 978 set lfive-e y x;
+#X obj 376 951 random 20;
+#X obj 328 783 t f f;
+#X obj 436 919 r template-width;
 #X obj 418 653 t b p p;
 #X obj 418 703 t f f;
-#X obj 248 781 / 3;
-#X obj 716 289 sel 5;
-#X msg 755 315 50;
-#X obj 553 251 t f f f f;
-#X obj 724 340 t f;
-#X msg 716 314 1000;
-#X floatatom 724 365 5 0 0 0 - - -, f 5;
-#X floatatom 336 607 5 0 0 0 - - -, f 5;
+#X obj 256 834 / 3;
+#X msg 634 449 50;
+#X obj 603 474 t f;
+#X floatatom 603 499 5 0 0 0 - - -, f 5;
+#X floatatom 328 808 5 0 0 0 - - -, f 5;
+#X obj 127 664 list prepend;
+#X obj 329 447 t f f;
+#X obj 297 626 fd_iterate;
+#X obj 421 978 set lfive-e x y;
+#X obj 155 727 list split 1;
+#X obj 297 650 t b f;
+#X obj 297 674 random 100;
+#X obj 297 698 moses 20;
+#X obj 297 722 b;
+#X obj 297 746 f;
+#X obj 768 771 random 100;
+#X obj 768 819 b;
+#X obj 832 798 moses 20;
+#X obj 832 822 b;
+#X obj 880 828 b;
+#X obj 737 851 random 10;
+#X obj 737 875 - 20;
+#X obj 768 795 moses 2;
+#X obj 827 861 random 10;
+#X obj 827 885 + 5;
+#X obj 910 878 + 20;
+#X obj 838 937 t f;
+#X msg 595 448 200;
+#X obj 910 854 random 8;
+#X obj 528 821 random 20;
+#X obj 528 845 - 10;
+#X obj 373 725 sel 1 3 5 6 7 4 2;
+#X obj 776 524 sel 1 3 6;
+#X obj 420 816 crand 1 16;
+#X obj 553 251 t f f f f f;
+#X obj 589 377 sel 5;
+#X msg 146 56 1 one \, 2 two \, 3 three \, 4 four \, 5 five \, 6 six
+\, 7 seven;
+#X obj 127 688 route 5;
 #X connect 0 0 1 0;
 #X connect 1 0 30 0;
 #X connect 2 0 40 0;
 #X connect 3 0 4 0;
 #X connect 3 1 5 0;
 #X connect 4 0 5 1;
-#X connect 4 0 60 0;
+#X connect 4 0 57 0;
 #X connect 5 0 4 1;
 #X connect 6 0 5 1;
 #X connect 6 0 4 1;
@@ -265,27 +170,27 @@ stafffive staffsix, f 29;
 #X connect 16 0 17 0;
 #X connect 16 1 18 0;
 #X connect 17 1 11 0;
-#X connect 18 0 68 0;
+#X connect 18 0 95 0;
 #X connect 19 0 20 0;
 #X connect 20 0 8 0;
 #X connect 21 0 22 1;
 #X connect 23 0 24 1;
 #X connect 24 0 2 0;
 #X connect 24 1 2 1;
-#X connect 25 0 32 0;
+#X connect 25 0 66 0;
 #X connect 25 1 24 0;
 #X connect 25 2 13 0;
-#X connect 26 0 63 0;
+#X connect 26 0 59 0;
 #X connect 27 0 42 0;
 #X connect 28 0 51 0;
 #X connect 28 1 13 0;
 #X connect 28 2 26 0;
 #X connect 28 3 27 0;
 #X connect 29 0 26 1;
-#X connect 31 0 52 0;
+#X connect 31 0 97 0;
 #X connect 32 0 33 0;
 #X connect 32 1 39 0;
-#X connect 32 2 65 0;
+#X connect 32 2 61 0;
 #X connect 32 3 6 0;
 #X connect 33 0 34 0;
 #X connect 34 0 35 0;
@@ -298,67 +203,116 @@ stafffive staffsix, f 29;
 #X connect 39 0 36 1;
 #X connect 40 0 19 0;
 #X connect 41 0 22 0;
-#X connect 42 0 55 0;
+#X connect 42 0 52 0;
 #X connect 43 0 44 0;
 #X connect 44 0 30 0;
 #X connect 45 0 46 0;
 #X connect 46 0 43 1;
 #X connect 47 0 46 0;
-#X connect 48 0 64 0;
+#X connect 48 0 60 0;
 #X connect 49 0 0 0;
 #X connect 50 0 30 0;
 #X connect 51 0 12 0;
-#X connect 52 0 16 0;
-#X connect 53 0 50 0;
-#X connect 53 1 50 0;
-#X connect 53 2 58 0;
-#X connect 53 3 49 0;
-#X connect 54 0 45 0;
-#X connect 54 1 45 0;
-#X connect 54 3 47 0;
-#X connect 55 0 43 0;
-#X connect 56 0 57 0;
-#X connect 57 0 62 0;
-#X connect 58 0 56 0;
-#X connect 58 1 59 0;
-#X connect 59 0 62 1;
-#X connect 60 0 72 0;
-#X connect 60 1 26 0;
-#X connect 61 0 59 1;
-#X connect 63 0 48 0;
-#X connect 63 1 30 1;
-#X connect 63 2 62 2;
-#X connect 64 1 53 0;
-#X connect 65 0 7 1;
-#X connect 66 0 70 0;
-#X connect 66 1 67 0;
-#X connect 67 0 69 0;
-#X connect 68 0 19 1;
-#X connect 68 1 54 0;
-#X connect 68 2 48 1;
-#X connect 68 3 66 0;
-#X connect 69 0 51 1;
-#X connect 69 0 71 0;
-#X connect 70 0 69 0;
+#X connect 52 0 43 0;
+#X connect 53 0 54 0;
+#X connect 54 0 69 1;
+#X connect 55 0 56 0;
+#X connect 55 1 76 0;
+#X connect 56 0 69 0;
+#X connect 57 0 65 0;
+#X connect 57 1 26 0;
+#X connect 58 0 56 1;
+#X connect 59 0 48 0;
+#X connect 59 1 30 1;
+#X connect 59 2 69 2;
+#X connect 60 1 92 0;
+#X connect 61 0 7 1;
+#X connect 62 0 63 0;
+#X connect 63 0 51 1;
+#X connect 63 0 64 0;
+#X connect 66 0 98 0;
+#X connect 67 0 19 1;
+#X connect 67 1 66 1;
+#X connect 68 0 71 0;
+#X connect 70 1 32 0;
+#X connect 71 0 72 0;
+#X connect 71 1 75 1;
+#X connect 72 0 73 0;
+#X connect 73 0 74 0;
+#X connect 74 0 75 0;
+#X connect 75 0 57 0;
+#X connect 76 0 83 0;
+#X connect 77 0 81 0;
+#X connect 78 0 79 0;
+#X connect 78 1 80 0;
+#X connect 79 0 84 0;
+#X connect 80 0 89 0;
+#X connect 81 0 82 0;
+#X connect 82 0 87 0;
+#X connect 83 0 77 0;
+#X connect 83 1 78 0;
+#X connect 84 0 85 0;
+#X connect 85 0 87 0;
+#X connect 86 0 87 0;
+#X connect 87 0 69 1;
+#X connect 88 0 63 0;
+#X connect 89 0 86 0;
+#X connect 90 0 91 0;
+#X connect 91 0 30 0;
+#X connect 92 0 50 0;
+#X connect 92 1 50 0;
+#X connect 92 2 55 0;
+#X connect 92 3 94 0;
+#X connect 92 5 90 0;
+#X connect 92 6 90 0;
+#X connect 92 7 49 0;
+#X connect 93 0 45 0;
+#X connect 93 1 45 0;
+#X connect 93 2 45 0;
+#X connect 93 3 47 0;
+#X connect 94 0 30 0;
+#X connect 95 0 67 0;
+#X connect 95 1 93 0;
+#X connect 95 2 48 1;
+#X connect 95 3 96 0;
+#X connect 96 0 88 0;
+#X connect 96 1 62 0;
+#X connect 97 0 16 0;
+#X connect 98 0 68 0;
+#X connect 98 1 70 0;
 #X restore 22 77 pd make-staff;
-#X msg 271 39 bang;
-#X obj 272 66 random 1600;
-#X obj 272 91 + 200;
-#X msg 248 121 \; pd-score clear \; get-score-p bang \; template-width
+#X msg 266 24 bang;
+#X obj 267 51 random 1600;
+#X obj 267 76 + 200;
+#X msg 268 99 \; pd-score clear \; get-score-p bang \; template-width
 \$1 \; make-staff bang \;;
-#X msg 202 37 1600;
+#N canvas 771 258 450 300 filled 0;
+#X obj 24 59 t b b;
+#X obj 24 83 random 1000;
+#X msg 117 3 bang;
+#X obj 117 27 random 30;
+#X obj 117 51 sel;
+#X obj 151 83 until;
+#X obj 79 120 random 32;
+#X obj 79 144 + 174;
+#X obj 34 190 append template s t;
+#X obj 161 166 r score-p;
+#X connect 0 0 1 0;
+#X connect 0 1 6 0;
+#X connect 1 0 8 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 1 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 1;
+#X connect 9 0 8 2;
+#X restore 53 147 pd filled squares;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
-#X connect 8 0 7 0;
-#X restore 243 6 pd init;
-#N canvas 1447 474 450 300 lone-e 0;
-#X obj 42 44 struct lone-e float w;
-#X restore 49 54 pd lone-e;
-#N canvas 299 806 450 300 ltwo-e 0;
-#X obj 42 18 struct ltwo-e float y float w;
-#X restore 49 76 pd ltwo-e;
-#N canvas 1054 477 758 462 edit 0;
+#X restore 12 38 pd init;
+#N canvas 522 312 758 462 edit 0;
 #X msg 189 30 traverse pd-score \, next;
 #X obj 189 54 pointer;
 #X obj 189 78 t p p p;
@@ -392,6 +346,20 @@ stafffive staffsix, f 29;
 #X floatatom 402 307 5 0 0 0 - - -, f 5;
 #X obj 585 308 getsize template lfive;
 #X floatatom 585 333 5 0 0 0 - - -, f 5;
+#X obj 512 24 nbx 5 14 -1e+37 1e+37 0 0 page-margin-l page-margin-l-set
+page-margin-l 0 -8 0 10 -262144 -1 -1 20 256;
+#X obj 512 54 nbx 5 14 -1e+37 1e+37 0 0 page-margin-r page-margin-r-set
+page-margin-r 0 -8 0 10 -262144 -1 -1 57 256;
+#N canvas 0 22 450 300 presets 0;
+#X obj 21 35 r page-margin-l;
+#X obj 21 59 text set presets 0 1;
+#X obj 21 106 text set presets 0 2;
+#X obj 21 82 r page-margin-r;
+#X obj 200 22 text define -k presets;
+#A set margins 80 20 \;;
+#X connect 0 0 1 0;
+#X connect 3 0 2 0;
+#X restore 528 93 pd presets;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 4 1;
@@ -421,14 +389,196 @@ stafffive staffsix, f 29;
 #X connect 29 0 23 1;
 #X connect 30 0 29 0;
 #X connect 31 0 32 0;
-#X restore 308 7 pd edit;
-#N canvas 756 804 450 300 lthree-e 0;
+#X restore 12 62 pd edit;
+#X msg 155 49 \; pd-score clear;
+#X obj 236 137 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#N canvas 370 455 450 300 TODO 0;
+#X text 25 31 register changes (red 8 \, green 8);
+#X text 26 56 thicker lines?;
+#X text 26 77 filled/empty rectangle: tremolo diad/ non-tremolo;
+#X text 25 101 triangles: preassure and voicig (high pitch);
+#X restore 160 18 pd TODO;
+#N canvas 0 22 450 300 structures 0;
+#N canvas 12 13 1141 408 score 1;
+#X scalar template 80 20 frl. voc. prs. sng. 101 21 41 53 1000 cb.
+dyn. 6 44 34 36.8913 \; 2 \; 4 \; 0 \; 3 \; 0 \; 4 \; 3 \; 0 \; 0 \;
+0 \; \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
+\; 0 0 \; -1 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; -3 0 \;
+0 0 \; 0 0 \; -2 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
+\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 4 0 \; 0 0 \; 0 0 \; 0 0 \; 0
+0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
+8 0 \; \; 0 \; 0 \; 4 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0
+\; 0 \; 0 \; 0 \; 4 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \;
+\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 6 0 \; 1 0 \; 0 0 \; 0 0 \; 6 0 \; 0
+0 \; 0 0 \; 0 0 \; 0 0 \; 4 0 \; 0 0 \; 0 0 \; 0 0 \; -10 0 \; -7 0
+\; \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 39 13 \; 0 0 \; 0 0 \; 0 0 \; 0 0
+\; 0 0 \; 0 0 \; 0 0 \; 284 27 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
+601 20 \; 0 0 \; 96 8 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 564 27 \; 82 10
+\; 0 0 \; 0 0 \; 0 0 \; 319 27 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 963 26
+\; 0 0 \; 238 24 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 23 23 \; 0 0 \; 0 0
+\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
+0 \; 684 24 \; 250 12 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
+0 0 \; 160 23 \; 363 23 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
+0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 94 24 \; 240 20 \;
+0 0 \; 768 21 \; 222 12 \; 894 20 \; 0 0 \; 0 0 \; 821 27 \; 0 0 \;
+0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 316 9 \; 0
+0 \; 313 25 \; 0 0 \; 368 21 \; 0 0 \; 0 0 \; 719 25 \; 362 5 \; 682
+20 \; 720 -17 \; 731 24 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
+0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 250 9 \; 0 0 \; 0 0 \; 0
+0 \; 0 0 \; 438 26 \; 0 0 \; 0 0 \; 0 0 \; 56 21 \; 0 0 \; 0 0 \; 0
+0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 962 26 \; 0 0 \; 0 0 \; 0 0
+\; 0 0 \; 596 26 \; 489 22 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 374
+20 \; 0 0 \; 59 27 \; 775 14 \; 0 0 \; 279 13 \; 0 0 \; 0 0 \; 0 0
+\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 544 24 \; 0 0 \;
+0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 442 20 \; 0 0 \; 0 0 \; 0 0 \; 399
+25 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 517 12 \; 0 0 \; 0 0 \; 0
+0 \; 292 23 \; 0 0 \; 0 0 \; 545 25 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
+\; 0 0 \; 0 0 \; 0 0 \; 0 1.39 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 15.8056
+\; 0 4.11624 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 10.6349 \; 0 0 \; 0 0
+\; 0 0 \; 0 9.40487 \; 0 6.654 \; 0 0 \; 0 0 \; 0 13.1992 \; \; 0 0
+\; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0
+0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \;
+0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0 \; 0 0
+\; \;;
+#X coords 0 0 1 1 300 300 0;
+#X restore 14 19 pd score;
+#N canvas 155 23 1125 751 template 0;
+#X text 74 164 INSTRUMENT NAMES;
+#X text 327 168 INDIVIDUAL INSTRUMENT LINES;
+#X obj 257 458 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 283 369 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 298 249 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 274 174 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 625 219 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 279 559 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 14 213 frl;
+#X text 14 283 voc;
+#X text 14 403 prs;
+#X text 14 513 sng;
+#X text 14 583 cb;
+#X text 9 688 dyn;
+#X obj 600 444 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 329 409 plot lthree 0 0 0 110 w3;
+#X obj 332 594 plot lfive 0 0 0 190 w5;
+#X obj 545 621 drawpolygon 0 1 0 190 width 190;
+#X obj 545 601 drawpolygon 0 1 0 182 width 182;
+#X obj 545 581 drawpolygon 0 1 0 174 width 174;
+#X obj 545 641 drawpolygon 0 1 0 198 width 198;
+#X obj 545 661 drawpolygon 0 1 0 206 width 206;
+#X obj 329 209 plot lone 0 0 0 40 w1;
+#X obj 59 209 drawsymbol staffname -40 30 0;
+#X obj 59 284 drawsymbol stafftwo -40 70 0;
+#X obj 59 409 drawsymbol staffthree -40 100 0;
+#X obj 59 514 drawsymbol stafffour -40 130 0;
+#X obj 58 593 drawsymbol stafffive -40 180 0;
+#X obj 329 284 plot ltwo 900 4 0 80 w2;
+#X obj 329 514 plot curve lfour 900 2 0 140 w4;
+#X obj 590 484 drawpolygon 0 1 0 132 width 132;
+#X obj 589 506 drawpolygon 0 1 0 140 width 140;
+#X obj 590 529 drawpolygon 0 1 0 148 width 148;
+#X obj 614 280 drawpolygon 0 1 0 72 width 72;
+#X obj 614 300 drawpolygon 0 1 0 80 width 80;
+#X obj 614 320 drawpolygon 0 1 0 88 width 88;
+#X text 655 166 STAFFLINES;
+#X obj 58 690 drawsymbol staffsix -40 250 0;
+#X obj 35 87 drawpolygon 23 10 0 0 a 0;
+#X obj 333 689 plot lsix 400 0 0 260 w6;
+#X obj 21 16 struct template float x float y array lone lone-e symbol
+staffname array ltwo ltwo-e symbol stafftwo array lthree lthree-e symbol
+staffthree array lfour lfour-e symbol stafffour float w1 float w2 float
+w3 float w4 float width symbol stafffive symbol staffsix array lfive
+lfive-e float w5 float w6 array lsix lsix-e float w7 float a array
+lseven lseven-e, f 133;
+#X obj 331 620 plot lseven 0 0 0 190 w7;
+#X obj 776 596 drawpolygon 0 1 5 206 5 174;
+#X obj 775 617 drawcurve 0 1 0 194 0 202 10 202 10 194 0 194, f 27
+;
+#X connect 2 0 26 0;
+#X connect 2 0 29 0;
+#X connect 3 0 15 0;
+#X connect 3 0 25 0;
+#X connect 4 0 24 0;
+#X connect 4 0 28 0;
+#X connect 5 0 22 0;
+#X connect 5 0 23 0;
+#X connect 6 0 33 0;
+#X connect 6 0 34 0;
+#X connect 6 0 35 0;
+#X connect 7 0 16 0;
+#X connect 7 0 27 0;
+#X connect 14 0 30 0;
+#X connect 14 0 31 0;
+#X connect 14 0 32 0;
+#X restore 34 42 pd template;
+#N canvas 830 474 450 300 frl. 0;
+#X obj 42 44 struct lone-e float w;
+#X restore 49 64 pd frl. lone-e;
+#N canvas 299 474 450 300 voc. 0;
+#X obj 42 18 struct ltwo-e float y;
+#X restore 49 86 pd voc. ltwo-e;
+#N canvas 756 474 450 300 prs. 0;
 #X obj 31 17 struct lthree-e float w;
-#X restore 49 100 pd lthree-e;
-#N canvas 1211 805 450 300 lfour-e 0;
-#X obj 36 17 struct lfour-e float y float w;
-#X restore 49 123 pd lfour-e;
-#N canvas 546 798 450 300 lfive-e 0;
-#X obj 53 31 struct lfive-e float y float x;
+#X restore 49 110 pd prs. lthree-e;
+#N canvas 830 474 450 300 sng. 0;
+#X obj 36 17 struct lfour-e float y;
+#X restore 49 133 pd sng. lfour-e;
+#N canvas 546 474 450 300 cbs. 0;
 #X obj 67 65 filledcurve 0 0 1 -2 -2 -2 2 2 2 2 -2;
-#X restore 49 146 pd lfive-e;
+#X obj 53 31 struct lfive-e float x float y;
+#X restore 49 156 pd cbs. lfive-e;
+#N canvas 0 23 450 300 dyn. 0;
+#X obj 27 30 struct lsix-e float y float w;
+#X restore 48 179 pd dyn. lsix-e;
+#N canvas 0 23 450 300 lseven-e 0;
+#X obj 47 27 struct lseven-e float x float y;
+#X obj 70 78 drawpolygon 0 2 -4 -4 -4 4 4 4 4 -4 -4 -4;
+#X restore 72 205 pd lseven-e;
+#X restore 12 14 pd structures;
+#N canvas 0 22 383 453 play 0;
+#X obj 142 377 r template-p;
+#X obj 47 402 set template a;
+#X obj 48 84 metro 30000;
+#X msg 57 343 stop;
+#X obj 47 153 t f f;
+#X obj 48 108 random 60000;
+#X obj 48 132 + 10000;
+#X obj 47 180 pack f 1000;
+#X obj 175 113 t f;
+#X obj 47 370 line;
+#X msg 47 244 0 \, \$2 \$1;
+#X msg 177 249 \; pd-score clear \; get-score-p bang \; template-width
+\$2 \; make-staff bang \;;
+#X obj 47 204 t a a;
+#X obj 48 45 t f f;
+#X obj 259 98 sel;
+#X obj 48 21 r play;
+#X connect 0 0 1 1;
+#X connect 2 0 5 0;
+#X connect 3 0 9 0;
+#X connect 4 0 7 0;
+#X connect 4 1 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 12 0;
+#X connect 8 0 2 1;
+#X connect 9 0 1 0;
+#X connect 10 0 9 0;
+#X connect 12 0 10 0;
+#X connect 12 1 11 0;
+#X connect 13 0 2 0;
+#X connect 13 1 14 0;
+#X connect 14 0 3 0;
+#X connect 15 0 13 0;
+#X restore 12 85 pd play;
+#X msg 236 157 \; play \$1;
+#X msg 21 132 \; pd-score clear \; get-score-p bang \; template-width
+1000 \; make-staff bang \; pd-score vis 1 \;;
+#X connect 3 0 7 0;
