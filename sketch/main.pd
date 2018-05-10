@@ -1,72 +1,213 @@
-#N struct template float x float y float w float h float t float tc
-array a0 a0-e symbol s0 float s0v float w0 float y0 float a0c float
-a0w float a0v array a1 a1-e symbol s1 float s1v float w1 float y1 float
-a1c float a1w float a1v array a2 a2-e symbol s2 float s2v float w2
-float y2 float a2c float a2w float a2v array a3 a3-e symbol s3 float
-s3v float w3 float y3 float a3c float a3w float a3v array a4 a4-e symbol
-s4 float s4v float w4 float y4 float a4c float a4w float a4v array
-b4 b4-e float b4c float b4w float b4v array c4 c4-e float c4c float
-c4w float c4v array a5 a5-e symbol s5 float s5v float w5 float y5 float
-a5c float a5w float a5v;
-#N struct a0-e float w;
-#N struct a1-e float y;
-#N struct a2-e float y;
-#N struct a3-e float y;
-#N struct a4-e float x float y;
-#N struct b4-e float x float y;
-#N struct c4-e float x float y;
-#N struct a5-e float w;
-#N canvas 545 477 444 280 10;
-#N canvas 541 52 1200 400 score 1;
-#X scalar template 80 20 1000 300 0 0 frl. 1 0 40 0 0 0 voc. 0 0 80
-0 0 1 sng. 0 0 120 0 0 1 symbol 0 0 160 0 0 0 trp. 1 0 200 0 0 1 0
-0 0 0 0 0 dyn. 1 0 240 0 0 0 \; 0 \; \; 0 \; \; 0 \; \; 0 \; \; 0 0
-\; \; 0 0 \; \; 0 0 \; \; 0 \; \;;
-#X coords 0 0 1 1 300 300 0;
-#X restore 10 10 pd score;
-#N canvas 995 51 559 1034 template 0;
+#N canvas 84 472 451 301 12;
+#N canvas 0 23 450 300 presets 0;
+#X obj 208 34 text define preset;
+#N canvas 277 173 450 300 update-changes 0;
+#X obj 59 74 symbol;
+#X obj 59 269 s;
+#X msg 127 250 symbol \$1-set;
+#X msg 59 171 traverse pd-score \, next;
+#X obj 59 195 pointer;
+#X obj 59 147 t b a;
+#X obj 59 224 get;
+#X msg 59 29 0 \, 1 \, 2 \, 3 \, 4 \, 5;
+#X obj 59 96 t a a;
+#X msg 59 123 set template \$1;
+#X obj 264 112 r update-changes;
+#X msg 59 52 s\$1 \, s\$1v \, a\$1c \, a\$1w \, a\$1v \, y\$1 \, w\$1
+;
+#X obj 264 136 t b b;
+#X obj 291 169 s get-pointer-set;
+#X connect 0 0 8 0;
+#X connect 2 0 1 1;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 3 0;
+#X connect 5 1 6 0;
+#X connect 6 0 1 0;
+#X connect 7 0 11 0;
+#X connect 8 0 9 0;
+#X connect 8 1 2 0;
+#X connect 9 0 5 0;
+#X connect 10 0 12 0;
+#X connect 11 0 0 0;
+#X connect 12 0 7 0;
+#X connect 12 1 13 0;
+#X restore 27 68 pd update-changes;
+#N canvas 0 22 450 300 load-preset 0;
+#X obj 194 29 r load-preset;
+#X obj 194 53 change -1;
+#X msg 59 234 \; preset write preset-\$1.txt;
+#X msg 194 83 \$1 \; preset read preset-\$1.txt;
+#X obj 60 164 f;
+#X obj 34 28 r overwrite-preset;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 4 1;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X restore 27 22 pd load-preset;
+#N canvas 0 23 450 300 update-preset 0;
+#X msg 82 72 line 0 \, bang;
+#X obj 111 131 list;
+#X obj 69 165 b;
+#X obj 111 155 list split 2;
+#X obj 111 179 t b a;
+#X obj 82 96 text sequence preset;
+#X obj 157 182 list split 1;
+#X obj 230 217 symbol;
+#X obj 188 263 s;
+#X obj 81 12 r update-preset;
+#X connect 0 0 5 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 3 1 1 1;
+#X connect 4 0 2 0;
+#X connect 4 1 6 0;
+#X connect 5 0 1 0;
+#X connect 6 0 8 0;
+#X connect 6 1 7 0;
+#X connect 7 0 8 1;
+#X connect 9 0 0 0;
+#X restore 27 45 pd update-preset;
+#X restore 174 43 pd presets;
+#N canvas 654 458 539 273 controls 0;
+#X obj 392 16 bng 15 250 50 0 get-pointer get-pointer-set get-pointer
+17 7 0 10 -204800 -1 -1;
+#X obj 10 12 _set 0 template;
+#X obj 392 38 bng 15 250 50 0 update-changes update-changes-set update-changes
+17 7 0 10 -204786 -13381 -1;
+#X obj 392 96 bng 15 250 50 0 update-preset update-preset-set update-preset
+17 7 0 10 -261682 -13381 -1;
+#X obj 391 73 hradio 15 1 0 8 load-preset load-preset-set load-preset
+0 -8 0 10 -262130 -1 -1 2;
+#X obj 392 118 bng 15 250 50 0 overwrite-preset overwrite-preset-set
+overwrite-preset 17 7 0 10 -258113 -1 -1;
+#X obj 132 12 _set 1 template;
+#X obj 254 12 _set 2 template;
+#X obj 10 134 _set 3 template;
+#X obj 132 134 _set 4 template;
+#X obj 254 134 _set 5 template;
+#X obj 392 147 bng 15 250 50 0 test-fill test-fill-set test-fill 17
+7 0 10 -262144 -1 -1;
+#X restore 84 43 pd controls;
+#N canvas 667 156 334 446 init 0;
+#X obj 59 197 t b p;
+#X obj 59 350 pointer;
+#X obj 67 300 r get-pointer;
+#X msg 59 323 send template-p;
+#X obj 59 250 append template x y w h;
+#X obj 36 19 loadbang;
+#X obj 43 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 59 274 t b p;
+#X obj 36 63 t b b b;
+#X msg 59 141 traverse pd-score \, bang;
+#X obj 59 170 pointer;
+#X msg 82 96 \; pd-score clear;
+#X msg 36 378 \; preset read preset-1.txt \; update-preset bang \;
+pd-score vis 1;
+#X msg 59 222 80 20 1000 300;
+#X connect 0 0 13 0;
+#X connect 0 1 4 4;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 7 0;
+#X connect 5 0 8 0;
+#X connect 6 0 8 0;
+#X connect 7 0 3 0;
+#X connect 7 1 1 0;
+#X connect 8 0 12 0;
+#X connect 8 1 9 0;
+#X connect 8 2 11 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
+#X connect 13 0 4 0;
+#X restore 20 43 pd init;
+#N canvas 25 59 1195 358 score 1;
+#X restore 20 20 pd score;
+#N canvas 721 23 559 751 structure 0;
 #X text 20 10 ///////// THE STRUCTURE ///////////////////////////////
 ;
-#X text 20 194 ///////// THE PLOTS ///////////////////////////////////
+#X text 20 234 ///////// THE PLOTS ///////////////////////////////////
 ;
-#X obj 50 709 drawpolygon 0 1 0 y4(0:1000)(-8:992) w y4(0:1000)(-8:992)
+#X obj 50 749 drawpolygon 0 1 0 y4(0:1000)(-8:992) w y4(0:1000)(-8:992)
 ;
-#X obj 50 749 drawpolygon 0 1 0 y4(0:1000)(8:1008) w y4(0:1000)(8:1008)
+#X obj 50 789 drawpolygon 0 1 0 y4(0:1000)(8:1008) w y4(0:1000)(8:1008)
 ;
-#X obj 50 769 drawpolygon 0 1 0 y4(0:1000)(16:1016) w y4(0:1000)(16:1016)
+#X obj 50 809 drawpolygon 0 1 0 y4(0:1000)(16:1016) w y4(0:1000)(16:1016)
 ;
-#X text 15 927 ///////// THE TIMELINE ///////////////////////////////////
+#X text 15 967 ///////// THE TIMELINE ///////////////////////////////////
 ;
-#X obj 50 729 drawpolygon 0 1 0 y4 w y4;
-#X obj 60 790 drawpolygon 0 1 5 y4(0:1000)(-16:982) 5 y4(0:1000)(16:1016)
+#X obj 50 769 drawpolygon 0 1 0 y4 w y4;
+#X obj 60 830 drawpolygon 0 1 5 y4(0:1000)(-16:982) 5 y4(0:1000)(16:1016)
 ;
-#X obj 59 811 drawcurve 0 1 0 y4(0:1000)(16:1016) 0 y4 10 y4 10 y4(0:1000)(16:1016)
+#X obj 59 851 drawcurve 0 1 0 y4(0:1000)(16:1016) 0 y4 10 y4 10 y4(0:1000)(16:1016)
 0 y4(0:1000)(16:1016);
-#X obj 19 970 drawpolygon tc 10 t(0:1000)(-2:998) 2 t(0:1000)(2:1002)
+#X obj 19 1010 drawpolygon tc 10 t(0:1000)(-2:998) 2 t(0:1000)(2:1002)
 2;
-#X obj 19 951 drawpolygon tc 1 t(0:1000)(0:1000) 0 t(0:1000)(0:1000)
+#X obj 19 991 drawpolygon tc 1 t(0:1000)(0:1000) 0 t(0:1000)(0:1000)
 h;
-#X obj 22 214 drawsymbol -v s0v s0 x(0:1000)(-50:0) y0(0:1000)(-10:990)
+#X obj 22 254 drawsymbol -v s0v s0 x(0:1000)(-50:0) y0(0:1000)(-10:990)
 0;
-#X obj 20 271 drawsymbol -v s1v s1 x(0:1000)(-50:0) y1(0:1000)(-10:990)
+#X obj 20 311 drawsymbol -v s1v s1 x(0:1000)(-50:0) y1(0:1000)(-10:990)
 0;
-#X obj 20 408 drawsymbol -v s2v s2 x(0:1000)(-50:0) y2(0:1000)(-10:990)
+#X obj 20 448 drawsymbol -v s2v s2 x(0:1000)(-50:0) y2(0:1000)(-10:990)
 0;
-#X obj 20 609 drawsymbol -v s4v s4 x(0:1000)(-50:0) y4(0:1000)(-10:990)
+#X obj 20 649 drawsymbol -v s4v s4 x(0:1000)(-50:0) y4(0:1000)(-10:990)
 0;
-#X obj 19 863 drawsymbol -v s5v s5 x(0:1000)(-50:0) y5(0:1000)(-10:990)
+#X obj 19 903 drawsymbol -v s5v s5 x(0:1000)(-50:0) y5(0:1000)(-10:990)
 0;
-#X obj 50 311 drawpolygon -v a1v 0 1 0 y1(0:1000)(-8:992) w y1(0:1000)(-8:992)
+#X obj 50 351 drawpolygon -v a1v 0 1 0 y1(0:1000)(-8:992) w y1(0:1000)(-8:992)
 ;
-#X obj 50 344 drawpolygon -v a1v 0 1 0 y1 w y1;
-#X obj 50 364 drawpolygon -v a1v 0 1 0 y1(0:1000)(8:1008) w y1(0:1000)(8:1008)
+#X obj 50 384 drawpolygon -v a1v 0 1 0 y1 w y1;
+#X obj 50 404 drawpolygon -v a1v 0 1 0 y1(0:1000)(8:1008) w y1(0:1000)(8:1008)
 ;
-#X obj 42 234 plot -v a0v a0 a0c a0w 0 y0 w0;
-#X obj 40 291 plot -v a1v a1 a1c a1w 0 y1 w1;
-#X obj 40 629 plot -v a4v a4 a4c a4w 0 y4 w4;
-#X obj 40 649 plot -v b4v b4 b4c b4w 0 y4 w4;
-#X obj 40 669 plot -v c4v c4 c4c c4w 0 y4 w4;
-#X obj 38 883 plot -v a5v a5 400 0 0 y5 w5;
+#X obj 42 274 plot -v a0v a0 a0c a0w 0 y0 w0;
+#X obj 40 331 plot -v a1v a1 a1c a1w 0 y1 w1;
+#X obj 40 669 plot -v a4v a4 a4c a4w 0 y4 w4;
+#X obj 40 689 plot -v b4v b4 b4c b4w 0 y4 w4;
+#X obj 40 709 plot -v c4v c4 c4c c4w 0 y4 w4;
+#X obj 50 729 drawpolygon 0 1 0 y4(0:1000)(-16:984) w y4(0:1000)(-16:984)
+;
+#X obj 40 467 plot -v a2v curve a2 a2c a2w 0 y2 w2;
+#X obj 50 487 drawpolygon -v a2v 0 1 0 y2(0:1000)(-8:992) w y2(0:1000)(-8:992)
+;
+#X obj 50 519 drawpolygon -v a2v 0 1 0 y2 w y2;
+#X obj 50 539 drawpolygon -v a2v 0 1 0 y2(0:1000)(8:1008) w y2(0:1000)(8:1008)
+;
+#X text 29 592 drawsymbol -v s3v s3 x(0:1000)(-50:0) y3(0:1000)(-10:990)
+0;
+#X text 41 612 plot -v a3v curve a3 a3c a3w 0 y3 w3;
+#N canvas 500 400 450 300 a0-e 0;
+#X obj 40 40 struct a0-e float w;
+#X restore 460 70 pd a0-e;
+#N canvas 500 400 450 300 a1-e 0;
+#X obj 40 40 struct a1-e float y;
+#X restore 460 90 pd a1-e;
+#N canvas 500 400 450 300 a2-e 0;
+#X obj 40 40 struct a2-e float y;
+#X restore 460 110 pd a2-e;
+#N canvas 500 400 450 300 a3-e 0;
+#X obj 40 40 struct a3-e float y;
+#X restore 460 130 pd a3-e;
+#N canvas 500 400 450 300 a4-e 0;
+#X obj 40 70 filledcurve c c 1 -2 -2 -2 2 2 2 2 -2;
+#X obj 40 40 struct a4-e float x float y float c float s;
+#X obj 60 125 drawpolygon -v s 0 1 -2 -5 2 -5;
+#X restore 460 150 pd a4-e;
+#N canvas 500 400 450 300 b4-e 0;
+#X obj 40 40 struct b4-e float x float y;
+#X obj 40 60 drawpolygon 0 2 -4 -4 -4 4 4 4 4 -4 -4 -4;
+#X restore 460 190 pd b4-e;
+#N canvas 500 400 450 300 c4-e 0;
+#X obj 40 40 struct c4-e float x float y;
+#X obj 40 60 filledcurve 90 90 1 -2 -2 -2 2 2 2 2 -2;
+#X restore 460 210 pd c4-e;
+#N canvas 500 400 450 300 a5-e 0;
+#X obj 39 42 struct a5-e float w;
+#X restore 460 170 pd a5-e;
+#X obj 22 194 s template-clicks;
 #X obj 22 30 struct template float x float y float w float h float
 t float tc array a0 a0-e symbol s0 float s0v float w0 float y0 float
 a0c float a0w float a0v array a1 a1-e symbol s1 float s1v float w1
@@ -77,106 +218,139 @@ a4 a4-e symbol s4 float s4v float w4 float y4 float a4c float a4w float
 a4v array b4 b4-e float b4c float b4w float b4v array c4 c4-e float
 c4c float c4w float c4v array a5 a5-e symbol s5 float s5v float w5
 float y5 float a5c float a5w float a5v;
-#X obj 50 689 drawpolygon 0 1 0 y4(0:1000)(-16:984) w y4(0:1000)(-16:984)
-;
-#X obj 40 427 plot -v a2v curve a2 a2c a2w 0 y2 w2;
-#X obj 50 447 drawpolygon -v a2v 0 1 0 y2(0:1000)(-8:992) w y2(0:1000)(-8:992)
-;
-#X obj 50 479 drawpolygon -v a2v 0 1 0 y2 w y2;
-#X obj 50 499 drawpolygon -v a2v 0 1 0 y2(0:1000)(8:1008) w y2(0:1000)(8:1008)
-;
-#X text 29 552 drawsymbol -v s3v s3 x(0:1000)(-50:0) y3(0:1000)(-10:990)
-0;
-#X text 41 572 plot -v a3v curve a3 a3c a3w 0 y3 w3;
-#X restore 20 32 pd template;
-#N canvas 500 400 450 300 a0-e 0;
-#X obj 40 40 struct a0-e float w;
-#X restore 30 60 pd a0-e;
-#N canvas 500 400 450 300 a1-e 0;
-#X obj 40 40 struct a1-e float y;
-#X restore 30 80 pd a1-e;
-#N canvas 500 400 450 300 a2-e 0;
-#X obj 40 40 struct a2-e float y;
-#X restore 30 100 pd a2-e;
-#N canvas 500 400 450 300 a3-e 0;
-#X obj 40 40 struct a3-e float y;
-#X restore 30 120 pd a3-e;
-#N canvas 500 400 450 300 a4-e 0;
-#X obj 40 40 struct a4-e float x float y;
-#X obj 40 60 filledcurve 900 900 1 -2 -2 -2 2 2 2 2 -2;
-#X restore 30 140 pd a4-e;
-#N canvas 500 400 450 300 b4-e 0;
-#X obj 40 40 struct b4-e float x float y;
-#X obj 40 60 drawpolygon 0 2 -4 -4 -4 4 4 4 4 -4 -4 -4;
-#X restore 30 180 pd b4-e;
-#N canvas 500 400 450 300 c4-e 0;
-#X obj 40 40 struct c4-e float x float y;
-#X obj 40 60 filledcurve 90 90 1 -2 -2 -2 2 2 2 2 -2;
-#X restore 30 200 pd c4-e;
-#N canvas 500 400 450 300 a5-e 0;
-#X obj 39 42 struct a5-e float w;
-#X restore 30 160 pd a5-e;
-#N canvas 537 782 450 300 set 0;
-#X obj 19 26 bng 15 250 50 0 get-pointer get-pointer-set get-pointer
-17 7 0 10 -262144 -1 -1;
-#X obj 20 47 _set 0;
-#X obj 256 17 text define preset;
-#X obj 143 47 _set 1;
-#X obj 266 47 _set 2;
-#X obj 20 147 _set 3;
-#X obj 143 147 _set 4;
-#X obj 266 147 _set 5;
-#X restore 135 55 pd set;
-#N canvas 51 496 450 300 get 0;
-#X obj 49 84 symbol;
-#X obj 82 278 s;
-#X msg 118 215 symbol \$1-set;
-#X msg 49 181 traverse pd-score \, next;
-#X obj 49 205 pointer;
-#X obj 49 157 t b a;
-#X obj 49 234 get;
-#X msg 49 36 0 \, 1 \, 2 \, 3 \, 4 \, 5;
-#X msg 49 62 s\$1v \, a\$1c \, a\$1w \, a\$1v \, y\$1 \, y\$1;
-#X obj 49 106 t a a;
-#X msg 49 133 set template \$1;
-#X msg 49 256 set \$1;
-#X connect 0 0 9 0;
-#X connect 2 0 1 1;
-#X connect 3 0 4 0;
-#X connect 4 0 6 0;
-#X connect 5 0 3 0;
-#X connect 5 1 6 0;
-#X connect 6 0 11 0;
+#X obj 38 923 plot -v a5v a5 a5c 0 0 y5 w5;
+#X connect 40 0 39 0;
+#X restore 84 20 pd structure;
+#N canvas 0 23 450 300 timeline 0;
+#X obj 37 74 set template t;
+#X obj 132 51 r template-p;
+#X obj 37 51 r timeline;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X restore 20 66 pd timeline;
+#N canvas 0 23 589 359 test 0;
+#X obj 51 180 fd_iterate;
+#X obj 51 202 t b f;
+#X obj 51 230 random 10;
+#X obj 51 283 list prepend 0;
+#X obj 171 283 list prepend 0;
+#X obj 291 283 list prepend 0;
+#X obj 51 156 t f f;
+#X obj 363 174 t b f f;
+#X msg 409 242 list w;
+#X msg 468 242 list y;
+#X msg 385 146 0 \, 1 \, 2 \, 5;
+#X obj 51 261 list prepend w;
+#X obj 409 200 sel 0 5 1 2;
+#X msg 201 189 25;
+#X msg 228 7 25 4;
+#X obj 228 31 unpack;
+#X obj 205 62 t f f;
+#X obj 205 86 fd_iterate;
+#X obj 83 15 t b f;
+#X obj 152 148 random 20;
+#X obj 152 172 - 10;
+#X msg 52 122 x \$1;
+#X msg 152 196 y \$1;
+#X obj 367 89 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 346 106 t b b b;
+#X obj 445 84 s get-pointer-set;
+#X obj 339 28 r test-fill;
+#X obj 52 98 random 1000;
+#X msg 246 221 c \$1;
+#X msg 243 172 900;
+#X msg 289 172 0;
+#X obj 170 109 random 100;
+#X obj 243 148 moses 20;
+#X obj 311 133 moses 30;
+#X msg 311 157 90;
+#X obj 70 62 t b b b b;
+#X msg 438 327 s \$1;
+#X obj 51 316 clone _array-set 6 template a;
+#X obj 438 278 random 10;
+#X obj 438 302 == 0;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 4 0;
+#X connect 2 0 11 0;
+#X connect 3 0 37 0;
+#X connect 4 0 37 1;
+#X connect 5 0 37 2;
+#X connect 6 0 0 0;
+#X connect 6 1 5 0;
+#X connect 7 0 13 0;
+#X connect 7 1 5 1;
+#X connect 7 1 4 1;
+#X connect 7 1 3 1;
+#X connect 7 2 12 0;
+#X connect 8 0 11 1;
+#X connect 9 0 11 1;
+#X connect 10 0 7 0;
+#X connect 11 0 3 0;
+#X connect 12 0 8 0;
+#X connect 12 1 8 0;
+#X connect 12 2 9 0;
+#X connect 12 3 9 0;
+#X connect 13 0 6 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 15 1 5 1;
+#X connect 15 1 4 1;
+#X connect 15 1 3 1;
+#X connect 16 0 17 0;
+#X connect 16 1 5 0;
+#X connect 17 0 18 0;
+#X connect 18 0 35 0;
+#X connect 18 1 4 0;
+#X connect 19 0 20 0;
+#X connect 20 0 22 0;
+#X connect 21 0 3 0;
+#X connect 22 0 3 0;
+#X connect 23 0 24 0;
+#X connect 24 0 14 0;
+#X connect 24 1 10 0;
+#X connect 24 2 25 0;
+#X connect 26 0 24 0;
+#X connect 27 0 21 0;
+#X connect 28 0 3 0;
+#X connect 29 0 28 0;
+#X connect 30 0 28 0;
+#X connect 31 0 32 0;
+#X connect 32 0 29 0;
+#X connect 32 1 33 0;
+#X connect 33 0 34 0;
+#X connect 33 1 30 0;
+#X connect 34 0 28 0;
+#X connect 35 0 27 0;
+#X connect 35 1 19 0;
+#X connect 35 2 31 0;
+#X connect 35 3 38 0;
+#X connect 36 0 3 0;
+#X connect 38 0 39 0;
+#X connect 39 0 36 0;
+#X restore 107 66 pd test fill;
+#X obj 122 135 line;
+#X msg 122 159 \$1 \; timeline \$1;
+#X obj 54 247 spigot 1;
+#X obj 55 129 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 55 149 t f f;
+#X msg 122 111 0 \, 1000 10000;
+#X obj 122 197 sel 1000;
+#X msg 122 221 bang \; test-fill bang \; pd-score sort;
+#X msg 276 67 \; pd-score clear;
+#X obj 45 183 sel 1 0;
+#X msg 65 211 stop;
 #X connect 7 0 8 0;
-#X connect 8 0 0 0;
-#X connect 9 0 10 0;
-#X connect 9 1 2 0;
-#X connect 10 0 5 0;
-#X connect 11 0 1 0;
-#X restore 135 75 pd get;
-#N canvas 75 479 450 300 append 0;
-#X obj 42 42 pointer;
-#X msg 42 17 traverse pd-score \, bang;
-#X obj 42 69 t b p;
-#X msg 182 48 \; pd-score clear;
-#X obj 42 122 append template x y w h t tc y0 y1 y2 y3 y4 y5;
-#X msg 42 94 80 20 1000 300 0 0 40 80 120 160 200 240;
-#X obj 311 240 pointer;
-#X obj 311 199 r get-pointer;
-#X msg 311 221 send template-p;
-#X obj 42 189 t b p p, f 33;
-#X msg 42 220 list frl. voc. sng. trp. dyn.;
-#X obj 42 248 set -symbol template s0 s1 s2 s4 s5;
-#X connect 0 0 2 0;
-#X connect 1 0 0 0;
-#X connect 2 0 5 0;
-#X connect 2 1 4 12;
-#X connect 4 0 9 0;
-#X connect 5 0 4 0;
-#X connect 7 0 8 0;
-#X connect 8 0 6 0;
-#X connect 9 0 10 0;
-#X connect 9 1 11 5;
-#X connect 9 2 6 1;
+#X connect 8 0 13 0;
+#X connect 9 0 12 0;
 #X connect 10 0 11 0;
-#X restore 135 34 pd append;
+#X connect 11 0 16 0;
+#X connect 11 1 9 1;
+#X connect 12 0 7 0;
+#X connect 13 0 14 0;
+#X connect 14 0 9 0;
+#X connect 16 0 14 0;
+#X connect 16 1 17 0;
+#X connect 17 0 7 0;
