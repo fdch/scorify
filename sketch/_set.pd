@@ -1,0 +1,8 @@
+#N canvas 0 22 450 300 10;
+#X obj 104 130 _setit-num a\$1c template;
+#X obj 104 104 _setit-tgl s\$1v template;
+#X obj 162 104 _setit-tgl a\$1v template;
+#X obj 104 163 _setit-num a\$1w template;
+#X obj 162 130 _setit-num y\$1 template;
+#X obj 162 163 _setit-num w\$1 template;
+#X coords 0 -1 1 1 121 98 2 100 100;

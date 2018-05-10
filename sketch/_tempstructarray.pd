@@ -1,0 +1,5 @@
+#N canvas 0 22 450 300 10;
+#X obj 76 103 filledcurve -v l\$1-e-v l\$1-e-c l\$1-e-c 1 -2 -2 -2
+2 2 2 2 -2, f 30;
+#X obj 39 31 struct l\$1-e float x float y float w float l\$1-e-v float
+l\$1-e-c;
