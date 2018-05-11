@@ -1,0 +1,24 @@
+#N canvas 1249 411 599 670 10;
+#X obj 36 103 drawsymbol -v s\$1v s\$1 x(0:1000)(-50:0) y\$1(0:1000)(-10:990)
+0, f 62;
+#X obj 57 172 drawpolygon 0 1 0 y\$1 w y\$1;
+#X obj 57 132 drawpolygon 0 1 0 y\$1(0:1000)(-16:984) w y\$1(0:1000)(-16:984)
+, f 61;
+#X obj 57 152 drawpolygon 0 1 0 y\$1(0:1000)(-8:992) w y\$1(0:1000)(-8:992)
+;
+#X obj 57 192 drawpolygon 0 1 0 y\$1(0:1000)(8:1008) w y\$1(0:1000)(8:1008)
+;
+#X obj 57 212 drawpolygon 0 1 0 y\$1(0:1000)(16:1016) w y\$1(0:1000)(16:1016)
+, f 61;
+#X obj 87 245 drawpolygon 0 1 5 y\$1(0:1000)(-16:982) 5 y\$1(0:1000)(16:1016)
+, f 61;
+#X obj 86 266 drawcurve 0 1 0 y\$1(0:1000)(16:1016) 0 y\$1 10 y\$1
+10 y\$1(0:1000)(16:1016) 0 y\$1(0:1000)(16:1016), f 61;
+#X text 115 315 missing F and C clefs;
+#X obj 29 29 struct l-\$1 float x float y float w array l\$1 l\$1-e
+symbol s\$1 float s\$1v float l\$1v float l\$1c float l\$1w float y\$1
+float w\$1;
+#X text 143 529 plot -v lb\$1v b\$1 l\$1c l\$1w 0 y\$1 w\$1;
+#X text 141 553 plot -v lc\$1v c\$1 l\$1c l\$1w 0 y\$1 w\$1;
+#X text 188 580 missing red \, green \, square notes;
+#X obj 119 479 plot -v l\$1v l\$1 l\$1c l\$1w 0 y\$1 w\$1;
