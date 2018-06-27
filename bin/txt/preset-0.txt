@@ -1,0 +1,12 @@
+1 s0v-set 1 a0v-set 9 a0c-set 28 y0-set 40 y0-set 0 a0w-set frl. s0-set
+;
+1 s1v-set 1 a1v-set 0 a1c-set 59 y1-set 73 y1-set 0 a1w-set voc. s1-set
+;
+1 s2v-set 1 a2v-set 900 a2c-set 100 y2-set 129 y2-set 0 a2w-set sng.
+s2-set;
+1 s3v-set 1 a3v-set 38 a3c-set 149 y3-set 0 y3-set 0 a3w-set mpc. s3-set
+;
+1 s4v-set 1 a4v-set 0 a4c-set 199 y4-set 199 y4-set 0 a4w-set b.fl.
+s4-set;
+1 s5v-set 1 a5v-set 0 a5c-set 255 y5-set 263 y5-set 0 a5w-set dyn.
+s5-set;

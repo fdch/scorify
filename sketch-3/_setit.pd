@@ -1,0 +1,14 @@
+#N canvas 457 26 450 300 10;
+#X obj 221 166 r \$1;
+#X obj 221 188 set \$2 \$1;
+#X obj 284 166 r \$2-p;
+#X obj 105 104 tgl 15 0 \$1 \$1-set \$1 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 218 68 r \$1;
+#X obj 218 89 list prepend \$1-set;
+#X obj 218 110 text set preset \$3 \$4;
+#X connect 0 0 1 0;
+#X connect 2 0 1 1;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X coords 0 -1 1 1 55 23 2 100 100;
