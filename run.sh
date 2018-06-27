@@ -4,6 +4,7 @@ pd=/Users/Guest/Downloads/Pd-0.48-1.app/Contents/Resources/bin/pd
 
 cd ./bin
 
+printing=1
 
 titled=1
 layout=3
@@ -21,15 +22,15 @@ randy () {
 
 randy
 echo "$seed"
-$pd -send ";listen 5000;titled-set $titled;layout-set $layout;instrument 0;limit $limit;seed $seed" -open "$pdfile" &
+$pd -send ";print-and-save $printing;listen 5000;titled-set $titled;layout-set $layout;instrument 0;limit $limit;seed $seed" -open "$pdfile" &
 sleep 2
 randy
 echo "$seed"
-$pd -send ";listen 5001;titled-set $titled;layout-set $layout;instrument 1;limit $limit;seed $seed" -open "$pdfile" &
+$pd -send ";print-and-save $printing;listen 5001;titled-set $titled;layout-set $layout;instrument 1;limit $limit;seed $seed" -open "$pdfile" &
 sleep 2 
 randy
 echo "$seed"
-$pd -send ";listen 5002;titled-set $titled;layout-set $layout;instrument 2;limit $limit;seed $seed" -open "$pdfile" &
+$pd -send ";print-and-save $printing;listen 5002;titled-set $titled;layout-set $layout;instrument 2;limit $limit;seed $seed" -open "$pdfile" &
 sleep 2 
 $pd -open controller.pd &
 sleep 2

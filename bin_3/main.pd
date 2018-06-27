@@ -20,7 +20,7 @@ bowxX float bowxY;
 #N struct a3-e float x float y float w;
 #N struct a4-e float x float y float c float v;
 #N struct a5-e float x float y float w;
-#N canvas 21 505 492 269 12;
+#N canvas 21 768 492 269 12;
 #X declare -path ./lib;
 #N canvas 2 23 1278 751 instructions 0;
 #X text 65 640 frl.;
@@ -84,7 +84,7 @@ is in between.;
 bow position across the viola \, and it goes from MSP (Molto Sul Pont)
 to MST (Molto Sul Tasto) and all that is in between.;
 #X restore 13 36 pd instructions _____;
-#N canvas 252 568 1028 206 controls 0;
+#N canvas 390 815 1028 206 controls 0;
 #X obj 609 38 fd_key;
 #X obj 213 148 bng 30 250 50 0 fill fill-set fill 35 15 0 12 -204786
 -1 -1;
@@ -98,7 +98,7 @@ to MST (Molto Sul Tasto) and all that is in between.;
 #X obj 335 104 bng 15 250 50 0 update-preset update-preset-set update-preset
 17 7 0 10 -261682 -13381 -1;
 #X obj 208 124 hradio 15 1 0 8 load-preset load-preset-set load-preset
-0 -8 0 10 -262130 -1 -1 4;
+0 -8 0 10 -262130 -1 -1 6;
 #X obj 335 124 bng 15 250 50 0 overwrite-preset overwrite-preset-set
 overwrite 17 7 0 10 -258113 -1 -1;
 #X obj 104 155 hradio 15 1 0 8 get-sizes get-sizes-set get-sizes 0
@@ -115,19 +115,19 @@ overwrite 17 7 0 10 -258113 -1 -1;
 #X obj 105 151 nbx 3 14 0 1e+37 0 0 x-mgn x-mgn-set x-mgn 0 -8 0 10
 -262144 -1 -1 80 256;
 #X obj 145 151 nbx 3 14 0 1e+37 0 0 y-mgn y-mgn-set y-mgn 0 -8 0 10
--262144 -1 -1 80 256;
+-262144 -1 -1 55 256;
 #X obj 185 151 nbx 4 14 0 1e+37 0 0 width width-set width 0 -8 0 10
 -262144 -1 -1 1000 256;
 #X obj 234 151 nbx 4 14 0 1e+37 0 0 height height-set height 0 -8 0
 10 -262144 -1 -1 300 256;
 #X obj 104 115 hradio 15 1 0 4 layout layout-set layout 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 3;
 #X obj 199 114 tgl 15 0 layout-vis layout-vis-set layout-vis 17 7 0
 10 -262144 -1 -1 0 1;
 #X coords 0 -1 1 1 185 71 2 100 100;
 #X restore 23 43 pd;
 #X obj 23 176 tgl 30 0 score-vis score-vis-set score-vis 35 15 0 12
--232576 -1 -1 0 1;
+-232576 -1 -1 1 1;
 #X obj 241 12 bng 15 250 50 0 4-bass_flute 4-bass_flute-set 4-bass_flute
 17 7 0 10 -262144 -1 -1;
 #X obj 365 12 bng 15 250 50 0 5-trumpet 5-trumpet-set 5-trumpet 17
@@ -160,12 +160,8 @@ max 0 -8 0 10 -262144 -1 -1 40000 256;
 -1 -1;
 #X coords 0 -1 1 1 85 60 2 100 100;
 #X restore 609 150 pd;
-#X obj 413 146 tgl 30 0 print-and-save print-and-save-set print-and-save
-35 15 0 12 -204786 -1 -1 0 1;
-#X obj 125 184 bng 15 250 50 0 clear-score clear-score-set clear-score
-17 7 0 10 -261234 -1 -1;
 #X restore 13 59 pd controls _________;
-#N canvas 19 474 450 300 guts 0;
+#N canvas 19 477 450 300 guts 0;
 #X obj 18 15 declare -path ./lib;
 #N canvas 636 240 450 300 - 0;
 #X obj 54 178 netreceive;
@@ -183,43 +179,57 @@ max 0 -8 0 10 -262144 -1 -1 40000 256;
 #X connect 5 0 6 0;
 #X restore 18 44 pd - netreceive;
 #N canvas 0 23 450 300 - 0;
-#N canvas 155 23 1123 424 score 0;
-#X scalar timeline-struct 80 80 1 0 902.826 300 \;;
-#X scalar texts 80 40 symbol 0 450 symbol 0 930 \;;
-#X scalar template 80 80 1000 300 0 0 1 0 0 frl. 1 116 9 1 0 voc. 1
-32 0 1 1 symbol symbol symbol 0 0 0 sng. 1 74 900 1 1 symbol symbol
-symbol 0 0 0 em.pos 1 148 38 1 1 b.fl. 1 208 0 1 0 dyn. 1 263 0 1 0
-\; 40 0 0 symbol 0 0 0 \; 88.4211 0 0 symbol 0 0 0 \; 136.842 0 0 symbol
-0 0 0 \; 185.263 0 2 symbol 0 0 0 \; 233.684 0 0 symbol 0 0 0 \; 282.105
-0 7 symbol 0 0 0 \; 330.526 0 2 symbol 0 0 0 \; 378.947 0 0 symbol
-0 0 0 \; 427.368 0 0 symbol 0 0 0 \; 475.789 0 1 symbol 0 0 0 \; 524.211
-0 0 symbol 0 0 0 \; 572.632 0 0 symbol 0 0 0 \; 621.053 0 0 symbol
-0 0 0 \; 669.474 0 0 symbol 0 0 0 \; 717.895 0 6 symbol 0 0 0 \; 766.316
-0 0 symbol 0 0 0 \; 814.737 0 0 symbol 0 0 0 \; 863.158 0 2 symbol
-0 0 0 \; 911.579 0 0 symbol 0 0 0 \; \; 40 0 0 \; 88.4211 0 0 \; 136.842
-0 0 \; 185.263 0 0 \; 233.684 0 0 \; 282.105 1 0 \; 330.526 0 0 \;
-378.947 -2 0 \; 427.368 6 0 \; 475.789 0 0 \; 524.211 7 0 \; 572.632
--4 0 \; 621.053 0 0 \; 669.474 0 0 \; 717.895 0 0 \; 766.316 -9 0 \;
-814.737 0 0 \; 863.158 0 0 \; 911.579 0 0 \; \; 40 0 0 \; 88.4211 0
-0 \; 136.842 0 0 \; 185.263 0 0 \; 233.684 0 0 \; 282.105 0 0 \; 330.526
-0 0 \; 378.947 0 0 \; 427.368 9 0 \; 475.789 0 0 \; 524.211 0 0 \;
-572.632 -8 0 \; 621.053 0 0 \; 669.474 0 0 \; 717.895 0 0 \; 766.316
-0 0 \; 814.737 2 0 \; 863.158 0 0 \; 911.579 0 0 \; \; 40 -5 0 \; 88.4211
-0 0 \; 136.842 0 0 \; 185.263 0 0 \; 233.684 0 0 \; 282.105 0 0 \;
-330.526 8 0 \; 378.947 6 0 \; 427.368 0 0 \; 475.789 -8 0 \; 524.211
-0 0 \; 572.632 0 0 \; 621.053 -7 0 \; 669.474 0 0 \; 717.895 0 0 \;
-766.316 -8 0 \; 814.737 -2 0 \; 863.158 5 0 \; 911.579 0 0 \; \; 40
-0 0 0 \; 88.4211 0 0 0 \; 136.842 -4 0 1 \; 185.263 0 0 0 \; 233.684
-0 0 0 \; 282.105 0 0 0 \; 330.526 0 0 0 \; 378.947 -5 0 1 \; 427.368
-0 0 0 \; 475.789 -16 0 1 \; 524.211 0 0 0 \; 572.632 0 0 0 \; 621.053
-0 0 0 \; 669.474 0 0 0 \; 717.895 0 0 0 \; 766.316 0 0 0 \; 814.737
-0 0 0 \; 863.158 14 0 1 \; 0 0 0 0 \; \; 40 0 0 \; 88.4211 0 0 \; 136.842
-0 0 \; 185.263 0 0 \; 233.684 0 0 \; 282.105 0 0 \; 330.526 0 0 \;
-378.947 0 0 \; 427.368 0 0 \; 475.789 0 1 \; 524.211 0 0 \; 572.632
-0 7 \; 621.053 0 0 \; 669.474 0 7 \; 717.895 0 0 \; 766.316 0 0 \;
-814.737 0 0 \; 863.158 0 0 \; 911.579 0 0 \; \;;
-#X obj 20 30 cnv 20 20 10 title title-set BASS_FLUTE 0 10 0 20 -262144
--33289 0;
+#N canvas 525 716 1125 338 score 1;
+#X scalar timeline-struct 80 55 1 0 0 300 \;;
+#X scalar texts 80 15 symbol 0 450 symbol 0 930 \;;
+#X scalar template 80 55 1000 300 0 0 0 1 0 empty 0 15 999 1 0 XY 1
+41 0 1 1 MSP ORD MST 1 1 1 Rot 1 90 900 1 1 +180 +90 +0 1 1 1 L.H.
+1 245 39 1 0 VLE 1 199 0 1 0 DYN. 1 142 0 1 0 \; 40 0 0 symbol 0 0
+0 \; 70.6667 0 0 symbol 0 0 0 \; 101.333 0 0 symbol 0 0 0 \; 132 0
+0 frog 1 0 -3 \; 162.667 0 0 punta 1 0 3 \; 193.333 0 0 symbol 0 0
+0 \; 224 0 0 symbol 0 0 0 \; 254.667 0 0 symbol 0 0 0 \; 285.333 0
+0 symbol 0 0 0 \; 316 0 0 symbol 0 0 0 \; 346.667 0 0 symbol 0 0 0
+\; 377.333 0 0 frog 1 0 -3 \; 408 0 0 symbol 0 0 0 \; 438.667 0 0 norm
+1 0 0 \; 469.333 0 0 symbol 0 0 0 \; 500 0 0 symbol 0 0 0 \; 530.667
+0 0 symbol 0 0 0 \; 561.333 0 0 symbol 0 0 0 \; 592 0 0 symbol 0 0
+0 \; 622.667 0 0 symbol 0 0 0 \; 653.333 0 0 symbol 0 0 0 \; 684 0
+0 symbol 0 0 0 \; 714.667 0 0 symbol 0 0 0 \; 745.333 0 0 symbol 0
+0 0 \; 776 0 0 symbol 0 0 0 \; 806.667 0 0 symbol 0 0 0 \; 837.333
+0 0 symbol 0 0 0 \; 868 0 0 symbol 0 0 0 \; 898.667 0 0 symbol 0 0
+0 \; 929.333 0 0 symbol 0 0 0 \; \; 40 0 0 \; 70.6667 -9 0 \; 101.333
+0 0 \; 132 0 0 \; 162.667 0 0 \; 193.333 -10 0 \; 224 0 0 \; 254.667
+0 0 \; 285.333 7 0 \; 316 0 0 \; 346.667 0 0 \; 377.333 0 0 \; 408
+0 0 \; 438.667 0 0 \; 469.333 0 0 \; 500 0 0 \; 530.667 0 0 \; 561.333
+0 0 \; 592 0 0 \; 622.667 0 0 \; 653.333 0 0 \; 684 6 0 \; 714.667
+0 0 \; 745.333 -3 0 \; 776 -1 0 \; 806.667 0 0 \; 837.333 0 0 \; 868
+0 0 \; 898.667 0 0 \; 929.333 0 0 \; \; 40 0 0 \; 70.6667 0 0 \; 101.333
+0 0 \; 132 0 0 \; 162.667 0 0 \; 193.333 6.731 3 \; 224 0 0 \; 254.667
+0 0 \; 285.333 0 0 \; 316 0 0 \; 346.667 2.726 2 \; 377.333 0 0 \;
+408 2.071 0 \; 438.667 0 0 \; 469.333 0 0 \; 500 0 0 \; 530.667 -8.319
+3 \; 561.333 -7.832 2 \; 592 0 0 \; 622.667 0 0 \; 653.333 0 0 \; 684
+0 0 \; 714.667 0 0 \; 745.333 0 0 \; 776 0 0 \; 806.667 0 0 \; 837.333
+0 0 \; 868 0 0 \; 898.667 0 0 \; 929.333 1.255 3 \; \; 40 0 0 \; 70.6667
+0 0 \; 101.333 0 0 \; 132 0 0 \; 162.667 0 0 \; 193.333 0 0 \; 224
+0 0 \; 254.667 0 0 \; 285.333 0 0 \; 316 0 0 \; 346.667 0 0 \; 377.333
+0 0 \; 408 0 0 \; 438.667 0 0 \; 469.333 0 0 \; 500 0 0 \; 530.667
+0 0 \; 561.333 0 0 \; 592 0 0 \; 622.667 0 0 \; 653.333 0 0 \; 684
+0 0 \; 714.667 0 0 \; 745.333 0 0 \; 776 0 0 \; 806.667 0 0 \; 837.333
+0 0 \; 868 0 0 \; 898.667 0 0 \; 929.333 0 0 \; \; 40 0 0 0 \; 70.6667
+0 0 0 \; 101.333 0 0 0 \; 132 0 0 0 \; 162.667 0 0 0 \; 193.333 0 0
+0 \; 224 0 0 0 \; 254.667 0 0 0 \; 285.333 0 0 0 \; 316 19 0 1 \; 346.667
+0 0 0 \; 377.333 17 0 1 \; 408 0 0 0 \; 438.667 13 0 1 \; 469.333 0
+0 0 \; 500 0 0 0 \; 530.667 0 0 0 \; 561.333 -6 0 1 \; 592 0 0 0 \;
+622.667 16 0 1 \; 653.333 0 0 0 \; 684 0 0 0 \; 714.667 0 0 0 \; 745.333
+0 0 0 \; 776 0 0 0 \; 806.667 0 0 0 \; 837.333 0 0 0 \; 868 0 0 0 \;
+898.667 0 0 0 \; 0 0 0 0 \; \; 40 0 0 \; 70.6667 0 0 \; 101.333 0 0
+\; 132 0 0 \; 162.667 0 0 \; 193.333 0 0 \; 224 0 0 \; 254.667 0 0
+\; 285.333 0 2 \; 316 0 0 \; 346.667 0 0 \; 377.333 0 0 \; 408 0 0
+\; 438.667 0 0 \; 469.333 0 0 \; 500 0 6 \; 530.667 0 0 \; 561.333
+0 0 \; 592 0 0 \; 622.667 0 0 \; 653.333 0 0 \; 684 0 0 \; 714.667
+0 0 \; 745.333 0 0 \; 776 0 0 \; 806.667 0 0 \; 837.333 0 0 \; 868
+0 0 \; 898.667 0 0 \; 929.333 0 0 \; \;;
+#X obj 20 30 cnv 20 20 10 title title-set VIOLA 0 10 0 20 -262144 -33289
+0;
 #X restore 32 28 pd score;
 #N canvas 172 23 1065 751 - 0;
 #X text 20 10 ///////// THE STRUCTURE ///////////////////////////////
@@ -571,7 +581,7 @@ height-set 300 \;;
 #X connect 8 3 9 0;
 #X restore 27 104 pd layout;
 #X restore 18 102 pd presets;
-#N canvas 51 178 615 596 - 0;
+#N canvas 51 414 615 596 - 0;
 #X obj 33 76 r preset-instrument;
 #N canvas 0 23 365 459 - 0;
 #X obj 73 396 pointer;
@@ -651,7 +661,7 @@ get-sizes-set \$3 \;, f 24;
 #X connect 13 4 1 0;
 #X connect 14 0 11 0;
 #X connect 15 0 11 0;
-#X restore 18 160 pd - preset-instrument;
+#X restore 18 161 pd - preset-instrument;
 #N canvas 474 476 433 287 - 0;
 #N canvas 773 14 774 724 - 0;
 #X msg 76 66 \; get-pointer bang;
@@ -1208,7 +1218,7 @@ width;
 #X connect 49 0 23 0;
 #X connect 50 0 39 0;
 #X restore 39 68 pd - isorhythms;
-#X restore 18 189 pd - fill;
+#X restore 18 190 pd - fill;
 #N canvas 0 23 450 300 - 0;
 #N canvas 703 244 477 468 - 0;
 #X obj 65 45 t b b;
@@ -1422,7 +1432,7 @@ pagenum-set *\$1* 5 15 0 16 6 12 0 \;;
 #X connect 40 0 3 1;
 #X connect 40 0 36 1;
 #X restore 29 125 pd - play sketch;
-#X restore 18 218 pd - sketch-stuff;
+#X restore 18 219 pd - sketch-stuff;
 #N canvas 0 23 450 300 - 0;
 #N canvas 0 23 1254 751 reader 0;
 #X obj 36 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -1936,12 +1946,12 @@ pagenum-set *\$1* 5 15 0 16 6 12 0 \;;
 #X connect 110 0 101 0;
 #X connect 111 0 105 0;
 #X restore 33 75 pd notes;
-#X restore 18 247 pd - reading;
+#X restore 18 248 pd - reading;
 #N canvas 0 23 450 300 - 0;
-#X obj 288 160 r line-pos;
-#X msg 288 184 \; pd-line-pos vis \$1;
-#X obj 287 223 r guts;
-#X msg 287 247 \; pd-guts vis \$1;
+#X obj 243 161 r line-pos;
+#X msg 243 185 \; pd-line-pos vis \$1;
+#X obj 242 224 r guts;
+#X msg 242 248 \; pd-guts vis \$1;
 #N canvas 0 23 450 300 - 0;
 #X obj 45 37 r score-vis;
 #X msg 45 61 \; pd-score vis \$1;
@@ -1953,6 +1963,7 @@ pagenum-set *\$1* 5 15 0 16 6 12 0 \;;
 #X connect 3 0 4 0;
 #X restore 49 47 pd - score-vis;
 #N canvas 371 151 432 525 - 0;
+#X obj 51 398 line;
 #X obj 51 424 t f f;
 #X obj 101 255 f;
 #X obj 51 158 t b b;
@@ -1976,39 +1987,38 @@ pagenum-set *\$1* 5 15 0 16 6 12 0 \;;
 #X obj 51 19 r play;
 #X obj 168 19 r reset;
 #X obj 115 439 r width;
-#X obj 51 398 line 0 1;
-#X connect 0 0 13 0;
-#X connect 0 1 18 0;
-#X connect 1 0 5 0;
-#X connect 2 0 3 0;
-#X connect 2 1 4 1;
-#X connect 3 0 23 0;
-#X connect 4 0 10 0;
-#X connect 5 0 6 0;
-#X connect 6 0 23 0;
-#X connect 7 0 1 0;
-#X connect 7 1 4 0;
-#X connect 8 0 1 1;
-#X connect 8 1 11 0;
-#X connect 9 0 5 1;
-#X connect 10 0 19 0;
-#X connect 11 0 5 1;
-#X connect 11 1 19 1;
-#X connect 11 2 10 1;
-#X connect 11 3 12 0;
-#X connect 12 0 23 0;
-#X connect 13 0 14 0;
-#X connect 15 0 8 0;
-#X connect 16 0 2 0;
-#X connect 16 1 7 0;
-#X connect 17 0 15 1;
-#X connect 18 0 1 1;
-#X connect 19 0 9 0;
-#X connect 19 1 9 1;
-#X connect 20 0 16 0;
-#X connect 21 0 15 0;
-#X connect 22 0 13 1;
-#X connect 23 0 0 0;
+#X connect 0 0 1 0;
+#X connect 1 0 14 0;
+#X connect 1 1 19 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 3 1 5 1;
+#X connect 4 0 0 0;
+#X connect 5 0 11 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;
+#X connect 8 0 2 0;
+#X connect 8 1 5 0;
+#X connect 9 0 2 1;
+#X connect 9 1 12 0;
+#X connect 10 0 6 1;
+#X connect 11 0 20 0;
+#X connect 12 0 6 1;
+#X connect 12 1 20 1;
+#X connect 12 2 11 1;
+#X connect 12 3 13 0;
+#X connect 13 0 0 0;
+#X connect 14 0 15 0;
+#X connect 16 0 9 0;
+#X connect 17 0 3 0;
+#X connect 17 1 8 0;
+#X connect 18 0 16 1;
+#X connect 19 0 2 1;
+#X connect 20 0 10 0;
+#X connect 20 1 10 1;
+#X connect 21 0 17 0;
+#X connect 22 0 16 0;
+#X connect 23 0 14 1;
 #X restore 49 68 pd - timeline key;
 #N canvas 0 23 450 300 - 0;
 #X obj 87 54 r preset-vis;
@@ -2124,20 +2134,16 @@ pagenum-set *\$1* 5 15 0 16 6 12 0 \;;
 #X connect 16 0 13 0;
 #X connect 16 1 14 0;
 #X restore 47 221 pd - isinstrument;
-#X obj 289 98 r clear-score;
-#X msg 289 121 \; pd-score clear;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
-#X connect 14 0 15 0;
-#X restore 195 73 pd - controls-stuff;
-#N canvas 215 23 348 376 - 0;
-#X obj 36 37 loadbang;
-#X msg 36 77 \; pd-score clear \; score-vis-set 0 \; \; sizes read
-../txt/sizes.txt \; layout-set 0 \; \; allow-set 0 \; \; guts-set 0
-\; pd-- vis 0 \; pd-instructions vis 0 \; pd-controls vis 0 \; \; maketempo-min-set
-20000 \; maketempo-max-set 40000 \;;
+#X restore 195 75 pd - controls-stuff;
+#N canvas 215 23 450 300 - 0;
+#X obj 36 38 loadbang;
+#X msg 36 78 \; pd-score clear \; score-vis-set 0 \; \; sizes read
+../txt/sizes.txt \; layout-set 0 \; \; allow-set 1 \; \; guts-set 0
+\; pd-- vis 0 \; pd-instructions vis 0 \; pd-controls vis 0 \;;
 #X connect 0 0 1 0;
-#X restore 195 44 pd - loadbang;
+#X restore 195 45 pd - loadbang;
 #N canvas 0 23 973 268 - 0;
 #X text 2 122 "spacebar" to play;
 #X text 188 122 "r" to reset;
@@ -2220,11 +2226,11 @@ pagenum-set *\$1* 5 15 0 16 6 12 0 \;;
 #X connect 26 1 1 1;
 #X connect 27 0 21 0;
 #X restore 18 131 pd sizes;
-#N canvas 662 137 618 637 autoplay 0;
-#X obj 88 370 mod 2;
-#X obj 88 394 sel 0 1;
-#X obj 109 451 s isorhythms-set;
-#X obj 92 484 s fill-set;
+#N canvas 662 355 618 637 autoplay 0;
+#X obj 43 319 mod 2;
+#X obj 43 343 sel 0 1;
+#X obj 64 400 s isorhythms-set;
+#X obj 36 429 s fill-set;
 #X obj 83 240 moses 20;
 #X msg 164 234 \; autoplay 0;
 #X obj 68 60 r timeline;
@@ -2247,14 +2253,16 @@ pagenum-set *\$1* 5 15 0 16 6 12 0 \;;
 #X obj 24 161 t b b;
 #X obj 93 160 s maketempo;
 #X obj 301 182 r maketempo;
-#X obj 458 196 s maketempo;
+#X obj 457 197 s maketempo;
+#X msg 106 316 \; reset-set bang \; play-set 1;
+#X obj 90 267 t f b b;
 #X obj 459 148 r tempo-vis-switch;
-#X obj 380 295 / 1000;
+#X obj 380 299 / 1000;
 #X msg 447 387 \; ntempo-set \$1;
-#X obj 380 318 fd_ceil;
+#X obj 380 322 fd_ceil;
 #X obj 458 171 sel 1;
 #X obj 299 361 pack;
-#X obj 380 342 t f f;
+#X obj 380 346 t f f;
 #X obj 306 291 t f f;
 #X msg 295 387 \$2 \, 0 \$1 \; page-dur-set \$1 \; tempo-set \$2;
 #X obj 295 439 line;
@@ -2264,16 +2272,10 @@ pagenum-set *\$1* 5 15 0 16 6 12 0 \;;
 #X msg 461 22 \; reset-score bang \; titled-set 1 \; layout-set 3 \;
 instrument 2 \; autoplay 1 \; limit 20 \;;
 #X obj 304 242 fd_crand 20000 40000 22;
-#X obj 90 267 t f f b;
-#X msg 113 302 \; reset-set bang \; play-set 1 \;;
-#X obj 43 328 t f f;
-#X obj 42 547 spigot;
-#X obj 81 521 r print-and-save;
-#X obj 42 571 s print-page-num;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 1 1 2 0;
-#X connect 4 0 42 0;
+#X connect 4 0 28 0;
 #X connect 4 1 5 0;
 #X connect 6 0 7 0;
 #X connect 7 0 14 0;
@@ -2291,65 +2293,32 @@ instrument 2 \; autoplay 1 \; limit 20 \;;
 #X connect 17 0 18 0;
 #X connect 18 0 19 1;
 #X connect 19 0 22 0;
-#X connect 21 0 32 0;
+#X connect 21 0 34 0;
 #X connect 22 0 20 0;
 #X connect 23 0 12 0;
 #X connect 23 1 24 0;
-#X connect 25 0 41 0;
-#X connect 27 0 31 0;
-#X connect 28 0 30 0;
-#X connect 30 0 33 0;
-#X connect 31 0 26 0;
+#X connect 25 0 43 0;
+#X connect 28 0 0 0;
+#X connect 28 1 27 0;
+#X connect 28 2 21 0;
+#X connect 29 0 33 0;
+#X connect 30 0 32 0;
 #X connect 32 0 35 0;
-#X connect 33 0 32 1;
-#X connect 33 1 29 0;
-#X connect 34 0 21 1;
-#X connect 34 1 28 0;
-#X connect 35 0 36 0;
-#X connect 36 0 37 0;
+#X connect 33 0 26 0;
+#X connect 34 0 37 0;
+#X connect 35 0 34 1;
+#X connect 35 1 31 0;
+#X connect 36 0 21 1;
+#X connect 36 1 30 0;
 #X connect 37 0 38 0;
 #X connect 38 0 39 0;
-#X connect 41 0 34 0;
-#X connect 42 0 44 0;
-#X connect 42 1 43 0;
-#X connect 42 2 21 0;
-#X connect 44 0 45 0;
-#X connect 44 1 0 0;
-#X connect 45 0 47 0;
-#X connect 46 0 45 1;
-#X restore 196 190 pd autoplay;
-#N canvas 538 194 443 424 - 0;
-#X obj 18 201 list;
-#X obj 18 252 t a a;
-#X obj 18 317 list;
-#X obj 57 122 ggee/getdir;
-#X obj 18 147 symbol;
-#X msg 18 277 bang \; pd-score print \$1/../output/test-1/\$2-\$3.ps
-;
-#X msg 18 343 bang \; pd-score write \$1/../output/test-1/\$2-\$3.txt
-\, vis 0 \;;
-#X obj 43 178 r title;
-#X obj 57 94 loadbang;
-#X obj 18 225 list;
-#X obj 18 44 t b f;
-#X obj 18 14 r print-page-num;
-#X obj 231 126 t f;
-#X connect 0 0 9 0;
-#X connect 1 0 5 0;
-#X connect 1 1 2 1;
-#X connect 2 0 6 0;
-#X connect 3 0 4 1;
-#X connect 4 0 0 0;
-#X connect 5 0 2 0;
-#X connect 7 0 0 1;
-#X connect 8 0 3 0;
-#X connect 9 0 1 0;
-#X connect 10 0 4 0;
-#X connect 10 1 12 0;
-#X connect 11 0 10 0;
-#X connect 12 0 9 1;
-#X restore 195 102 pd - print-and-save;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X connect 43 0 36 0;
+#X restore 196 116 pd autoplay;
 #X restore 13 13 pd guts _____________;
-#X obj 13 83 bng 15 250 50 0 clear-score clear-score-set clear-score
-17 7 0 10 -261234 -1 -1;
-#X msg 12 114 \; pd quit;
+#X msg 23 98 \; pd-score clear;
+#X obj 217 22 loadbang;
+#X msg 217 46 \; maketempo-min-set 20000 \; maketempo-max-set 40000
+\;;
+#X connect 4 0 5 0;
