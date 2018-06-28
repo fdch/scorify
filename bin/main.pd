@@ -1,4 +1,24 @@
-#N canvas 22 426 492 269 12;
+#N struct timeline-struct float x float y float tv float tc float t
+float h;
+#N struct template float x float y float w float h float t float tc
+float gclef float cclef float tv array a0 a0-e symbol s0 float s0v
+float y0 float a0c float a0v float a0v-l array a1 a1-e symbol s1 float
+s1v float y1 float a1c float a1v float a1v-l symbol s1l0 symbol s1l1
+symbol s1l2 float s1l0v float s1l1v float s1l2v array a2 a2-e symbol
+s2 float s2v float y2 float a2c float a2v float a2v-l symbol s2l0 symbol
+s2l1 symbol s2l2 float s2l0v float s2l1v float s2l2v array a3 a3-e
+symbol s3 float s3v float y3 float a3c float a3v float a3v-l array
+a4 a4-e symbol s4 float s4v float y4 float a4c float a4v float a4v-l
+array a5 a5-e symbol s5 float s5v float y5 float a5c float a5v float
+a5v-l;
+#N struct a0-e float x float y float w symbol bowx float bowxv float
+bowxX float bowxY;
+#N struct a1-e float x float y float w;
+#N struct a2-e float x float y float w;
+#N struct a3-e float x float y float w;
+#N struct a4-e float x float y float c float v;
+#N struct a5-e float x float y float w;
+#N canvas 15 752 492 269 12;
 #X declare -path ./lib;
 #N canvas 2 23 1278 751 instructions 0;
 #X text 65 640 frl.;
@@ -62,7 +82,7 @@ is in between.;
 bow position across the viola \, and it goes from MSP (Molto Sul Pont)
 to MST (Molto Sul Tasto) and all that is in between.;
 #X restore 13 36 pd instructions _____;
-#N canvas 252 568 1028 206 controls 0;
+#N canvas 514 787 1026 238 controls 1;
 #X obj 609 38 fd_key;
 #X obj 213 148 bng 30 250 50 0 fill fill-set fill 35 15 0 12 -204786
 -1 -1;
@@ -76,7 +96,7 @@ to MST (Molto Sul Tasto) and all that is in between.;
 #X obj 335 104 bng 15 250 50 0 update-preset update-preset-set update-preset
 17 7 0 10 -261682 -13381 -1;
 #X obj 208 124 hradio 15 1 0 8 load-preset load-preset-set load-preset
-0 -8 0 10 -262130 -1 -1 4;
+0 -8 0 10 -262130 -1 -1 6;
 #X obj 335 124 bng 15 250 50 0 overwrite-preset overwrite-preset-set
 overwrite 17 7 0 10 -258113 -1 -1;
 #X obj 104 155 hradio 15 1 0 8 get-sizes get-sizes-set get-sizes 0
@@ -178,7 +198,42 @@ max 0 -8 0 10 -262144 -1 -1 40000 256;
 #X connect 11 0 7 0;
 #X restore 18 44 pd - netreceive;
 #N canvas 0 23 450 300 - 0;
-#N canvas 155 23 1125 340 score 0;
+#N canvas 525 716 1125 338 score 0;
+#X scalar timeline-struct 80 80 1 0 0 300 \;;
+#X scalar template 80 80 1000 300 0 0 0 0 0 empty 0 15 999 1 0 XY 1
+41 0 1 1 symbol symbol symbol 0 0 0 Rot 1 90 900 1 1 symbol symbol
+symbol 0 0 0 L.H. 1 245 39 1 0 VLE 1 199 0 1 0 DYN. 1 142 0 1 0 \;
+0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0
+0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0
+0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0
+symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol
+0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0
+0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0
+0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0
+\; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \;
+0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; 0
+0 0 symbol 0 0 0 \; 0 0 0 symbol 0 0 0 \; \; 0 0 0 \; 0 0 0 \; 0 0
+0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \;
+0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0
+0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \;
+0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; \; 0 0 0 \; 0 0 0 \; 0
+0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0
+\; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0
+0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0
+\; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; \; 0 0 0 \; 0 0 0 \;
+0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0
+0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \;
+0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0
+0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; \; 0 0 0 0 \; 0 0
+0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0
+0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0
+\; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \;
+0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0
+0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; 0 0 0 0 \; \; 0 0 0 \; 0 0 0 \; 0 0
+0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \;
+0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0
+0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \;
+0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; 0 0 0 \; \;;
 #X restore 32 28 pd score;
 #N canvas 172 23 1065 751 - 0;
 #X text 20 10 ///////// THE STRUCTURE ///////////////////////////////

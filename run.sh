@@ -5,7 +5,7 @@ pd=/Users/Guest/Downloads/Pd-0.48-1.app/Contents/Resources/bin/pd
 cd ./bin
 
 printing=1
-
+instruments="0 1 2"
 titled=1
 layout=3
 limit=20
@@ -20,19 +20,9 @@ randy () {
 	seed=$((($thedate + $randome) % 20000))
 }
 
-randy
-echo "$seed"
-$pd -send ";print-and-save $printing;listen 5000;titled-set $titled;layout-set $layout;instrument 0;limit $limit;seed $seed" -open "$pdfile" &
-sleep 2
-randy
-echo "$seed"
-$pd -send ";print-and-save $printing;listen 5001;titled-set $titled;layout-set $layout;instrument 1;limit $limit;seed $seed" -open "$pdfile" &
-sleep 2 
-randy
-echo "$seed"
-$pd -send ";print-and-save $printing;listen 5002;titled-set $titled;layout-set $layout;instrument 2;limit $limit;seed $seed" -open "$pdfile" &
-sleep 2 
-$pd -open controller.pd &
-sleep 2
-echo "
-Ready to go"
+for i in $instruments ; do
+	randy
+	$pd -send ";listen-port-set $i;titled-set $titled;layout-set $layout;limit $limit;instrument $i;print-and-save-set $printing;seed $seed" -open "$pdfile" &
+	sleep 2
+done
+$pd -open controller.pd
