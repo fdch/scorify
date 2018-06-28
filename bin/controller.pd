@@ -25,6 +25,7 @@
 #X obj 34 128 clone _netsend 3;
 #X obj 50 74 r disconnect;
 #X msg 50 95 all bang;
+#X obj 155 101 r parts;
 #X connect 0 0 13 0;
 #X connect 1 0 4 1;
 #X connect 2 0 5 1;
@@ -47,6 +48,7 @@
 #X connect 18 0 14 0;
 #X connect 19 0 20 0;
 #X connect 20 0 18 1;
+#X connect 21 0 18 2;
 #X restore 150 29 pd netsend;
 #X obj 9 8 bng 15 250 50 0 connect connect-set connect 17 7 0 10 -261689
 -1 -1;
@@ -55,4 +57,46 @@
 #X obj 149 67 declare -path ./lib;
 #X obj 9 26 bng 15 250 50 0 disconnect disconnect-set disconnect 17
 7 0 10 -261234 -1 -1;
+#N canvas 38 43 464 448 parts 0;
+#X obj 16 14 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 16 34 \; parts 0 pd-controls vis \$1;
+#X obj 16 64 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 16 84 \; parts 0 line-pos-set \$1;
+#X obj 16 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 16 136 \; parts 0 score-vis-set \$1;
+#X obj 16 219 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 16 239 \; parts 0 print-and-save-set \$1;
+#X obj 15 273 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 15 293 \; parts 0 titled-set \$1;
+#X msg 222 36 \; parts 0 4-bass_flute-set bang;
+#X msg 221 67 \; parts 0 5-trumpet-set bang;
+#X msg 221 98 \; parts 0 6-viola-set bang;
+#X obj 223 156 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X msg 223 176 \; parts 0 layout-set \$1;
+#X obj 222 219 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 4;
+#X msg 222 239 \; parts 0 load-preset-set \$1 \; parts 0 update-preset-set
+bang;
+#X obj 17 340 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 17 360 \; parts 0 play-set \$1;
+#X msg 16 395 \; parts 0 reset-set bang;
+#X msg 228 307 \; parts 0 fill-set bang;
+#X msg 228 337 \; parts 0 isorhythms-set bang;
+#X msg 15 171 \; parts 0 clear-score-set bang;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 8 0 9 0;
+#X connect 13 0 14 0;
+#X connect 15 0 16 0;
+#X connect 17 0 18 0;
+#X restore 150 47 pd parts;
 #X connect 0 0 1 0;
