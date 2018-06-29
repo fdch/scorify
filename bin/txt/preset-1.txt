@@ -1,12 +1,12 @@
-1 s0v-set 1 a0v-set 0 a0c-set 40 y0-set 0 a0w-set 25.5 w0-set frull.
-s0-set;
-1 s1v-set 1 a1v-set 0 a1c-set 86 y1-set 1 a1w-set 25.5 w1-set vocals
-s1-set;
-1 s2v-set 1 a2v-set 0 a2c-set 133 y2-set 1 a2w-set 25.5 w2-set sing
+1 s0v-set 1 a0v-set 9 a0c-set 40 y0-set 40 y0-set 0 a0w-set one s0-set
+;
+1 s1v-set 1 a1v-set 0 a1c-set 73 y1-set 73 y1-set 0 a1w-set two s1-set
+;
+1 s2v-set 1 a2v-set 900 a2c-set 129 y2-set 129 y2-set 0 a2w-set three
 s2-set;
-0 s3v-set 1 a3v-set 0 a3c-set 0 y3-set 0 a3w-set 0 w3-set empty s3-set
+1 s3v-set 1 a3v-set 38 a3c-set 159 y3-set 0 y3-set 0 a3w-set four s3-set
 ;
-1 s4v-set 1 a4v-set 0 a4c-set 193 y4-set 0 a4w-set 0 w4-set flute s4-set
+1 s4v-set 1 a4v-set 0 a4c-set 199 y4-set 199 y4-set 0 a4w-set five
+s4-set;
+1 s5v-set 1 a5v-set 0 a5c-set 263 y5-set 263 y5-set 0 a5w-set six s5-set
 ;
-1 s5v-set 1 a5v-set 0 a5c-set 263 y5-set 0 a5w-set 25.5 w5-set dyn.
-s5-set;
