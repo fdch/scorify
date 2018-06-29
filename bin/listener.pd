@@ -1,0 +1,319 @@
+#N canvas 531 46 437 182 10;
+#X declare -path ./lib -lib timbreIDLib;
+#X obj 16 13 declare -path ./lib -lib timbreIDLib;
+#X obj 174 43 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 174 63 \; switch-adc-1 \$1;
+#X obj 16 43 clone -s 1 _adc 2;
+#N canvas 828 53 450 403 complex 0;
+#X obj 36 28 mfcc~ 1024 100;
+#N canvas 0 81 450 300 plotting 0;
+#X obj 57 183 list prepend 0;
+#X obj 192 148 list length;
+#X obj 192 170 change;
+#X obj 57 89 t l l;
+#X obj 192 192 pack f \$0;
+#X msg 192 215 \; \$2-mfcc-graph resize \$1 \;;
+#X obj 57 205 s \$0-mfcc-graph;
+#X obj 57 49 inlet;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 3 1 1 0;
+#X connect 4 0 5 0;
+#X connect 7 0 3 0;
+#X restore 36 90 pd plotting;
+#X obj 135 35 melSpec~ 1024 100;
+#N canvas 0 81 450 300 plotting 0;
+#X obj 57 183 list prepend 0;
+#X obj 192 148 list length;
+#X obj 192 170 change;
+#X obj 57 89 t l l;
+#X obj 192 192 pack f \$0;
+#X msg 192 215 \; \$2-melSpec-graph resize \$1 \;;
+#X obj 57 205 s \$0-melSpec-graph;
+#X obj 57 49 inlet;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 3 1 1 0;
+#X connect 4 0 5 0;
+#X connect 7 0 3 0;
+#X restore 135 87 pd plotting;
+#X obj 254 38 magSpec~ 1024;
+#N canvas 202 174 463 267 do-plotting 0;
+#X obj 79 37 inlet;
+#X obj 79 173 list prepend 0;
+#X obj 233 116 list length;
+#X obj 233 138 change;
+#X obj 233 160 pack f \$0;
+#X obj 79 59 t l l;
+#X obj 79 194 s \$0-magSpec-graph;
+#X msg 233 181 \; \$2-magSpec-graph resize \$1 \;;
+#X connect 0 0 5 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 5 0 1 0;
+#X connect 5 1 2 0;
+#X restore 254 88 pd do-plotting;
+#N canvas 205 170 463 267 do-plotting 0;
+#X obj 79 37 inlet;
+#X obj 79 173 list prepend 0;
+#X obj 203 116 list length;
+#X obj 203 138 change;
+#X obj 203 160 pack f \$0;
+#X obj 79 59 t l l;
+#X obj 79 194 s \$0-dct-graph;
+#X msg 203 181 \; \$2-dct-graph resize \$1 \;;
+#X connect 0 0 5 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 5 0 1 0;
+#X connect 5 1 2 0;
+#X restore 35 193 pd do-plotting;
+#X obj 35 143 dct~ 1024;
+#X obj 142 145 cepstrum~ 1024;
+#N canvas 0 81 724 308 do-plotting 0;
+#X obj 79 37 inlet;
+#X obj 79 59 t b l l;
+#X obj 130 173 list prepend 0;
+#X obj 304 116 list length;
+#X obj 304 138 change;
+#X obj 304 160 pack f \$0;
+#X msg 304 181 \; \$2-cepstrum-graph resize \$1 \;;
+#X obj 130 194 s \$0-cepstrum-graph;
+#X obj 79 253 tabletool \$0-cepstrum-graph;
+#X msg 79 231 clip -0.25 0.5;
+#X text 290 234 clip to graph bounds because first value in cepstrum
+is often extremely low;
+#X connect 0 0 1 0;
+#X connect 1 0 9 0;
+#X connect 1 1 2 0;
+#X connect 1 2 3 0;
+#X connect 2 0 7 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 9 0 8 0;
+#X restore 142 190 pd do-plotting;
+#X obj 254 142 bfcc~ 1024 0.5;
+#N canvas 0 81 450 300 plotting 0;
+#X obj 57 193 list prepend 0;
+#X obj 192 158 list length;
+#X obj 192 180 change;
+#X obj 57 99 t l l;
+#X obj 192 202 pack f \$0;
+#X msg 192 225 \; \$2-bfcc-graph resize \$1 \;;
+#X obj 57 215 s \$0-bfcc-graph;
+#X obj 57 59 inlet;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 3 1 1 0;
+#X connect 4 0 5 0;
+#X connect 7 0 3 0;
+#X restore 254 192 pd plotting;
+#X obj 27 234 barkSpec~ 1024 0.5;
+#N canvas 580 401 450 300 plotting 0;
+#X obj 55 193 list prepend 0;
+#X obj 210 158 list length;
+#X obj 210 180 change;
+#X obj 55 99 t l l;
+#X obj 55 215 s \$0-barkSpec-graph;
+#X msg 210 225 \; \$2-barkSpec-graph resize \$1 \;;
+#X obj 210 202 pack f \$0;
+#X obj 55 69 inlet;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 0 0;
+#X connect 3 1 1 0;
+#X connect 6 0 5 0;
+#X connect 7 0 3 0;
+#X restore 27 284 pd plotting;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 12 0 13 0;
+#X restore 14 71 pd complex feature;
+#N canvas 0 22 450 300 stuff 0;
+#N canvas 573 31 447 618 featSwitcher-creator 0;
+#X msg 45 34 read ./txt/allfeats.txt \, bang;
+#X msg 45 147 line 0 \, auto;
+#X obj 45 168 text sequence -s text t;
+#X obj 45 105 text;
+#X obj 51 251 f;
+#X obj 82 251 + 1;
+#X obj 51 333 + 30;
+#X obj 51 272 t f f;
+#X obj 45 126 t b p b, f 33;
+#X msg 214 193 0;
+#X obj 45 189 t b a, f 19;
+#X obj 65 415 list, f 29;
+#X obj 51 312 * 35;
+#X msg 211 451 obj \$2 \$1 _featSwitcher 1 \$3;
+#X msg 239 266 clear;
+#X obj 65 370 pack f 30;
+#X obj 225 584 s pd-fooo;
+#N canvas 0 23 458 682 fooo 0;
+#X obj 30 30 nbx 4 15 -100 1e+10 0 0 waveSlope-1-set waveSlope-1 waveSlope-1
+-4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 65 nbx 4 15 -100 1e+10 0 0 specSpread-1-set specSpread-1
+specSpread-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 100 nbx 4 15 -100 1e+10 0 0 specSlope-1-set specSlope-1 specSlope-1
+-4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 135 nbx 4 15 -100 1e+10 0 0 specSkewness-1-set specSkewness-1
+specSkewness-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 170 nbx 4 15 -100 1e+10 0 0 specRolloff-1-set specRolloff-1
+specRolloff-1 -4 -10 0 12 -262144 -66577 -1 22050 256;
+#X obj 30 205 nbx 4 15 -100 1e+10 0 0 specKurtosis-1-set specKurtosis-1
+specKurtosis-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 240 nbx 4 15 -100 1e+10 0 0 specIrregularity-1-set specIrregularity-1
+specIrregularity-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 275 nbx 4 15 -100 1e+10 0 0 specHarmonicity-1-set specHarmonicity-1
+specHarmonicity-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 310 nbx 4 15 -100 1e+10 0 0 specFlux-1-set specFlux-1 specFlux-1
+-4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 345 nbx 4 15 -100 1e+10 0 0 specFlatness-1-set specFlatness-1
+specFlatness-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 380 nbx 4 15 -100 1e+10 0 0 specCentroid-1-set specCentroid-1
+specCentroid-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 415 nbx 4 15 -100 1e+10 0 0 specBrightness-1-set specBrightness-1
+specBrightness-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 450 nbx 4 15 -100 1e+10 0 0 peakSample-1-set peakSample-1
+peakSample-1 -4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 485 nbx 4 15 -100 1e+10 0 0 minSample-1-set minSample-1 minSample-1
+-4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 520 nbx 4 15 -100 1e+10 0 0 minSampleDelta-1-set minSampleDelta-1
+minSampleDelta-1 -4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 555 nbx 4 15 -100 1e+10 0 0 maxSample-1-set maxSample-1 maxSample-1
+-4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 590 nbx 4 15 -100 1e+10 0 0 maxSampleDelta-1-set maxSampleDelta-1
+maxSampleDelta-1 -4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 625 nbx 4 15 -100 1e+10 0 0 maxSampleDelta-1-set maxSampleDelta-1
+maxSampleDelta-1 -4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 660 nbx 4 15 -100 1e+10 0 0 bark-1-set bark-1 bark-1 -4 -10
+0 12 -262144 -66577 -1 0 256;
+#X obj 30 695 nbx 4 15 -100 1e+10 0 0 barkSpecSpread-1-set barkSpecSpread-1
+barkSpecSpread-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 730 nbx 4 15 -100 1e+10 0 0 barkSpecSlope-1-set barkSpecSlope-1
+barkSpecSlope-1 -4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 765 nbx 4 15 -100 1e+10 0 0 barkSpecSkewness-1-set barkSpecSkewness-1
+barkSpecSkewness-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 800 nbx 4 15 -100 1e+10 0 0 barkSpecKurtosis-1-set barkSpecKurtosis-1
+barkSpecKurtosis-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 835 nbx 4 15 -100 1e+10 0 0 barkSpecRolloff-1-set barkSpecRolloff-1
+barkSpecRolloff-1 -4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 870 nbx 4 15 -100 1e+10 0 0 barkSpecIrregularity-1-set barkSpecIrregularity-1
+barkSpecIrregularity-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 905 nbx 4 15 -100 1e+10 0 0 barkSpecFlux-1-set barkSpecFlux-1
+barkSpecFlux-1 -4 -10 0 12 -262144 -66577 -1 0 256;
+#X obj 30 940 nbx 4 15 -100 1e+10 0 0 barkSpecFlatness-1-set barkSpecFlatness-1
+barkSpecFlatness-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 975 nbx 4 15 -100 1e+10 0 0 barkSpecCentroid-1-set barkSpecCentroid-1
+barkSpecCentroid-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X obj 30 1010 nbx 4 15 -100 1e+10 0 0 barkSpecBrightness-1-set barkSpecBrightness-1
+barkSpecBrightness-1 -4 -10 0 12 -262144 -66577 -1 -1 256;
+#X restore 299 40 pd fooo;
+#X msg 282 357 floatatom;
+#X msg 25 534 obj \$2 \$1 nbx 4 15 -100 1e+10 0 0 \$3-1-set \$3-1 \$3-1
+-4 -10 0 12 0 2 22 0;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 10 0;
+#X connect 3 0 8 0;
+#X connect 4 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 1;
+#X connect 6 0 15 0;
+#X connect 7 0 12 0;
+#X connect 8 0 1 0;
+#X connect 8 1 2 1;
+#X connect 8 2 9 0;
+#X connect 8 2 14 0;
+#X connect 9 0 4 1;
+#X connect 10 0 4 0;
+#X connect 10 1 11 1;
+#X connect 11 0 13 0;
+#X connect 11 0 19 0;
+#X connect 12 0 6 0;
+#X connect 14 0 16 0;
+#X connect 15 0 11 0;
+#X connect 19 0 16 0;
+#X restore 47 20 pd featSwitcher-creator;
+#N canvas 0 22 450 300 clone 0;
+#X obj 37 74 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 81 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 47 108 vis 1 \$1;
+#X msg 71 128 vis 2 \$1;
+#X obj 64 164 --clone -s 1 _allfeatSwitcher 2;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X restore 46 39 pd clone example;
+#X restore 283 17 pd stuff;
+#X obj 292 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 292 62 \; switch-adc-2 \$1;
+#N canvas 0 23 819 424 features 0;
+#X text 326 357 <-- break this down depending on mic/instrument;
+#X obj 16 17 clone -s 1 _singleFeat 2 waveSlope 4096;
+#X obj 15 38 clone -s 1 _singleFeat 2 specSpread 4096;
+#X obj 15 58 clone -s 1 _singleFeat 2 specSlope 4096;
+#X obj 15 78 clone -s 1 _singleFeat 2 specSkewness 4096;
+#X obj 15 98 clone -s 1 _singleFeat 2 specRolloff 4096;
+#X obj 15 118 clone -s 1 _singleFeat 2 specKurtosis 4096;
+#X obj 15 138 clone -s 1 _singleFeat 2 specIrregularity 4096;
+#X obj 15 158 clone -s 1 _singleFeat 2 specHarmonicity 4096;
+#X obj 15 178 clone -s 1 _singleFeat 2 specFlux 4096;
+#X obj 15 198 clone -s 1 _singleFeat 2 specFlatness 4096;
+#X obj 15 218 clone -s 1 _singleFeat 2 specCentroid 4096;
+#X obj 15 238 clone -s 1 _singleFeat 2 specBrightness 4096;
+#X obj 15 258 clone -s 1 _singleFeat 2 peakSample 4096;
+#X obj 15 278 clone -s 1 _singleFeat 2 minSample 4096;
+#X obj 15 298 clone -s 1 _singleFeat 2 minSampleDelta 4096;
+#X obj 15 318 clone -s 1 _singleFeat 2 maxSample 4096;
+#X obj 15 338 clone -s 1 _singleFeat 2 maxSampleDelta 4096;
+#X obj 15 358 clone -s 1 _singleFeat 2 maxSampleDelta 4096 43 64;
+#X obj 15 378 clone -s 1 _singleFeat 2 bark 2048 128 0.5;
+#X obj 345 38 clone -s 1 _singleFeat 2 barkSpecSpread 4096 0.5;
+#X obj 345 58 clone -s 1 _singleFeat 2 barkSpecSlope 4096 0.5;
+#X obj 345 78 clone -s 1 _singleFeat 2 barkSpecSkewness 4096 0.5;
+#X obj 345 118 clone -s 1 _singleFeat 2 barkSpecKurtosis 4096 0.5;
+#X obj 345 98 clone -s 1 _singleFeat 2 barkSpecRolloff 4096 0.5 0.85
+;
+#X obj 345 138 clone -s 1 _singleFeat 2 barkSpecIrregularity 4096 0.5
+0;
+#X obj 345 178 clone -s 1 _singleFeat 2 barkSpecFlux 4096 0.5 512;
+#X obj 345 198 clone -s 1 _singleFeat 2 barkSpecFlatness 4096 0.5;
+#X obj 345 218 clone -s 1 _singleFeat 2 barkSpecCentroid 4096 0.5;
+#X obj 345 238 clone -s 1 _singleFeat 2 barkSpecBrightness 4096 0.5
+8.5;
+#X restore 13 96 pd features;
+#N canvas 188 70 1002 657 featGui 0;
+#X obj 220 29 _featGui 1;
+#X obj 9 29 _allfeatSwitcher 1;
+#X obj 720 29 _featGui 2;
+#X obj 509 29 _allfeatSwitcher 2;
+#X obj 10 9 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 511 8 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X restore 13 117 pd featGui;
+#X connect 1 0 2 0;
+#X connect 6 0 7 0;

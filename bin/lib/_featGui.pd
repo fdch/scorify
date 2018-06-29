@@ -1,0 +1,59 @@
+#N canvas 182 71 312 608 12;
+#X obj 20 30 nbx 4 15 -100 1e+10 0 0 waveSlope-\$1-set waveSlope-\$1
+waveSlope-\$1 -4 -10 0 10 -262144 -66577 -1 -0.00232401 256;
+#X obj 20 65 nbx 4 15 -100 1e+10 0 0 specSpread-\$1-set specSpread-\$1
+specSpread-\$1 -4 -10 0 10 -262144 -66577 -1 2108.34 256;
+#X obj 20 100 nbx 4 15 -100 1e+10 0 0 specSlope-\$1-set specSlope-\$1
+specSlope-\$1 -4 -10 0 10 -262144 -66577 -1 -0.00821921 256;
+#X obj 20 135 nbx 4 15 -100 1e+10 0 0 specSkewness-\$1-set specSkewness-\$1
+specSkewness-\$1 -4 -10 0 10 -262144 -66577 -1 3.49354 256;
+#X obj 20 170 nbx 4 15 -100 1e+10 0 0 specRolloff-\$1-set specRolloff-\$1
+specRolloff-\$1 -4 -10 0 10 -262144 -66577 -1 1507.32 256;
+#X obj 20 205 nbx 4 15 -100 1e+10 0 0 specKurtosis-\$1-set specKurtosis-\$1
+specKurtosis-\$1 -4 -10 0 10 -262144 -66577 -1 12.6343 256;
+#X obj 20 240 nbx 4 15 -100 1e+10 0 0 specIrregularity-\$1-set specIrregularity-\$1
+specIrregularity-\$1 -4 -10 0 10 -262144 -66577 -1 0.263889 256;
+#X obj 20 275 nbx 4 15 -100 1e+10 0 0 specHarmonicity-\$1-set specHarmonicity-\$1
+specHarmonicity-\$1 -4 -10 0 10 -262144 -66577 -1 0.555556 256;
+#X obj 20 310 nbx 4 15 -100 1e+10 0 0 specFlux-\$1-set specFlux-\$1
+specFlux-\$1 -4 -10 0 10 -262144 -66577 -1 0.816631 256;
+#X obj 20 345 nbx 4 15 -100 1e+10 0 0 specFlatness-\$1-set specFlatness-\$1
+specFlatness-\$1 -4 -10 0 10 -262144 -66577 -1 0.0401409 256;
+#X obj 20 380 nbx 4 15 -100 1e+10 0 0 specCentroid-\$1-set specCentroid-\$1
+specCentroid-\$1 -4 -10 0 10 -262144 -66577 -1 1542.35 256;
+#X obj 20 415 nbx 4 15 -100 1e+10 0 0 specBrightness-\$1-set specBrightness-\$1
+specBrightness-\$1 -4 -10 0 10 -262144 -66577 -1 0.220868 256;
+#X obj 19 472 nbx 4 15 -100 1e+10 0 0 peakSample-\$1-set peakSample-\$1
+peakSample-\$1 -4 -10 0 10 -262144 -66577 -1 0.0127144 256;
+#X obj 19 507 nbx 4 15 -100 1e+10 0 0 minSample-\$1-set minSample-\$1
+minSample-\$1 -4 -10 0 10 -262144 -66577 -1 -0.0143779 256;
+#X obj 19 542 nbx 4 15 -100 1e+10 0 0 minSampleDelta-\$1-set minSampleDelta-\$1
+minSampleDelta-\$1 -4 -10 0 10 -262144 -66577 -1 1.16852e-07 256;
+#X obj 142 507 nbx 4 15 -100 1e+10 0 0 maxSample-\$1-set maxSample-\$1
+maxSample-\$1 -4 -10 0 10 -262144 -66577 -1 0.00385554 256;
+#X obj 142 542 nbx 4 15 -100 1e+10 0 0 maxSampleDelta-\$1-set maxSampleDelta-\$1
+maxSampleDelta-\$1 -4 -10 0 10 -262144 -66577 -1 0.0172206 256;
+#X obj 142 65 nbx 4 15 -100 1e+10 0 0 barkSpecSpread-\$1-set barkSpecSpread-\$1
+barkSpecSpread-\$1 -4 -10 0 10 -262144 -66577 -1 6.8157 256;
+#X obj 142 100 nbx 4 15 -100 1e+10 0 0 barkSpecSlope-\$1-set barkSpecSlope-\$1
+barkSpecSlope-\$1 -4 -10 0 10 -262144 -66577 -1 0 256;
+#X obj 142 135 nbx 4 15 -100 1e+10 0 0 barkSpecSkewness-\$1-set barkSpecSkewness-\$1
+barkSpecSkewness-\$1 -4 -10 0 10 -262144 -66577 -1 0 256;
+#X obj 142 170 nbx 4 15 -100 1e+10 0 0 barkSpecKurtosis-\$1-set barkSpecKurtosis-\$1
+barkSpecKurtosis-\$1 -4 -10 0 10 -262144 -66577 -1 0 256;
+#X obj 142 205 nbx 4 15 -100 1e+10 0 0 barkSpecRolloff-\$1-set barkSpecRolloff-\$1
+barkSpecRolloff-\$1 -4 -10 0 10 -262144 -66577 -1 0 256;
+#X obj 142 240 nbx 4 15 -100 1e+10 0 0 barkSpecIrregularity-\$1-set
+barkSpecIrregularity-\$1 barkSpecIrregularity-\$1 -4 -10 0 10 -262144
+-66577 -1 0 256;
+#X obj 142 310 nbx 4 15 -100 1e+10 0 0 barkSpecFlux-\$1-set barkSpecFlux-\$1
+barkSpecFlux-\$1 -4 -10 0 10 -262144 -66577 -1 0 256;
+#X obj 142 345 nbx 4 15 -100 1e+10 0 0 barkSpecFlatness-\$1-set barkSpecFlatness-\$1
+barkSpecFlatness-\$1 -4 -10 0 10 -262144 -66577 -1 0 256;
+#X obj 142 380 nbx 4 15 -100 1e+10 0 0 barkSpecCentroid-\$1-set barkSpecCentroid-\$1
+barkSpecCentroid-\$1 -4 -10 0 10 -262144 -66577 -1 0 256;
+#X obj 142 415 nbx 4 15 -100 1e+10 0 0 barkSpecBrightness-\$1-set barkSpecBrightness-\$1
+barkSpecBrightness-\$1 -4 -10 0 10 -262144 -66577 -1 0 256;
+#X obj 142 20 bng 15 250 50 0 bark-\$1-set bark-\$1 bark-\$1 17 7 0
+10 -262144 -1 -1;
+#X coords 0 0 1 1 267 562 2 10 10;

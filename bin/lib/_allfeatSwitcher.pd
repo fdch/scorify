@@ -1,0 +1,57 @@
+#N canvas 0 22 227 686 10;
+#X obj 12 516 _featSwitcher \$1 barkSpecIrregularity;
+#X obj 12 138 _featSwitcher \$1 specIrregularity;
+#X obj 12 12 _featSwitcher \$1 waveSlope;
+#X obj 12 33 _featSwitcher \$1 specSpread;
+#X obj 12 54 _featSwitcher \$1 specSlope;
+#X obj 12 75 _featSwitcher \$1 specSkewness;
+#X obj 12 96 _featSwitcher \$1 specRolloff;
+#X obj 12 117 _featSwitcher \$1 specKurtosis;
+#X obj 12 159 _featSwitcher \$1 specHarmonicity;
+#X obj 12 180 _featSwitcher \$1 specFlux;
+#X obj 12 201 _featSwitcher \$1 specFlatness;
+#X obj 12 222 _featSwitcher \$1 specCentroid;
+#X obj 12 243 _featSwitcher \$1 specBrightness;
+#X obj 12 264 _featSwitcher \$1 peakSample;
+#X obj 12 285 _featSwitcher \$1 minSample;
+#X obj 12 306 _featSwitcher \$1 minSampleDelta;
+#X obj 12 327 _featSwitcher \$1 maxSample;
+#X obj 12 348 _featSwitcher \$1 maxSampleDelta;
+#X obj 12 369 _featSwitcher \$1 maxSampleDelta;
+#X obj 12 390 _featSwitcher \$1 bark;
+#X obj 12 411 _featSwitcher \$1 barkSpecSpread;
+#X obj 12 432 _featSwitcher \$1 barkSpecSlope;
+#X obj 12 453 _featSwitcher \$1 barkSpecSkewness;
+#X obj 12 474 _featSwitcher \$1 barkSpecKurtosis;
+#X obj 12 495 _featSwitcher \$1 barkSpecRolloff;
+#X obj 12 537 _featSwitcher \$1 barkSpecFlux;
+#X obj 12 558 _featSwitcher \$1 barkSpecFlatness;
+#X obj 12 579 _featSwitcher \$1 barkSpecCentroid;
+#X obj 12 600 _featSwitcher \$1 barkSpecBrightness;
+#X obj 12 623 inlet;
+#N canvas 360 143 593 526 \$0-all 0;
+#X obj 29 16 inlet;
+#X msg 29 78 \; switch-waveSlope-\$1-set \$2 \; switch-specSpread-\$1-set
+\$2 \; switch-specSlope-\$1-set \$2 \; switch-specSkewness-\$1-set
+\$2 \; switch-specRolloff-\$1-set \$2 \; switch-specKurtosis-\$1-set
+\$2 \; switch-specIrregularity-\$1-set \$2 \; switch-specHarmonicity-\$1-set
+\$2 \; switch-specFlux-\$1-set \$2 \; switch-specFlatness-\$1-set \$2
+\; switch-specCentroid-\$1-set \$2 \; switch-specBrightness-\$1-set
+\$2 \; switch-peakSample-\$1-set \$2 \; switch-minSample-\$1-set \$2
+\; switch-minSampleDelta-\$1-set \$2 \; switch-maxSample-\$1-set \$2
+\; switch-maxSampleDelta-\$1-set \$2 \; switch-maxSampleDelta-\$1-set
+\$2 \; switch-bark-\$1-set \$2 \; switch-barkSpecSpread-\$1-set \$2
+\; switch-barkSpecSlope-\$1-set \$2 \; switch-barkSpecSkewness-\$1-set
+\$2 \; switch-barkSpecKurtosis-\$1-set \$2 \; switch-barkSpecRolloff-\$1-set
+\$2 \; switch-barkSpecIrregularity-\$1-set \$2 \; switch-barkSpecFlux-\$1-set
+\$2 \; switch-barkSpecFlatness-\$1-set \$2 \; switch-barkSpecCentroid-\$1-set
+\$2 \; switch-barkSpecBrightness-\$1-set \$2 \;;
+#X obj 29 37 swap \$1;
+#X obj 29 58 pack;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;
+#X connect 3 0 1 0;
+#X restore 12 644 pd \$0-all;
+#X connect 29 0 30 0;
+#X coords 0 -1 1 1 207 611 2 10 10;
