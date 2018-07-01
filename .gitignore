@@ -1,0 +1,7 @@
+bin_*
+sketch*
+.DS_Store
+*.wav
+*.aup
+*.auf
+*.au
