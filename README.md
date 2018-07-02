@@ -1,5 +1,7 @@
 # Scorify: Live score generation for instruments and electronics.
 
+![screenshot](https://raw.githubusercontent.com/fdch/scorify/master/paper/screenshot.png)
+
 ## Abstract
 
 I propose a system of graphic notation for both instrument and electronics with the capability to combine realtime and non-realtime composition. Primarily intended for mixed media, this project attempts to bridge instrumental and electronic notation. Using Pure Data's "data structures," combined with networked computers, this project reduced not only the notational gap between instruments and electronics, but also brings forth realtime composition based in audio feature extraction.
@@ -22,8 +24,4 @@ One of the major advantages this system pushes forward is the live score generat
 [Puredata](http://msp.ucsd.edu)
 
 [Scorify](https://github.com/fdch/scorify)
-
-## Screenshot
-
-![screenshot](https://raw.githubusercontent.com/fdch/scorify/master/paper/screenshot.png)
 
