@@ -25,3 +25,8 @@ One of the major advantages this system pushes forward is the live score generat
 
 [Scorify](https://github.com/fdch/scorify)
 
+## Website
+
+[https://fdch.github.io/scorify](https://fdch.github.io/scorify/)
+
+
