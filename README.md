@@ -2,11 +2,12 @@
 
 ## Abstract
 
-I propose a system of graphic notation for both instrument and electronics with the capability to combine realtime and non-realtime composition. Primarily intended for mixed media, this project attempts to bridge instrumental and electronic notation. Using Pure Data's ``data structures,'' combined with networked computers, this project reduced not only the notational gap between instruments and electronics, but also brings forth realtime composition based in audio feature extraction.}
+I propose a system of graphic notation for both instrument and electronics with the capability to combine realtime and non-realtime composition. Primarily intended for mixed media, this project attempts to bridge instrumental and electronic notation. Using Pure Data's "data structures," combined with networked computers, this project reduced not only the notational gap between instruments and electronics, but also brings forth realtime composition based in audio feature extraction.
+
 
 ## Concept
 
-I propose a system of graphic notation for both instrument and electronics with the capability to combine realtime and non-realtime composition. This system relies on Pure Data's ``data structures'' for its graphical interface. This allows for both manual and automatic editing. This is to say that the composer can edit with the cursor each element, as lines or dots on a graphical canvas, like in other traditional graphic notation software (i.e., HighC). However, the graphical environment can be edited automatically or generated in realtime, either by constructing the algorithmia from within Pd, or by sending values via TCP/IP from other programs (e.g., Supercollider, MaxMSP, etc.) Furthermore, scores can be edited and stored for further use, for example, as in a generation of a database of scores which can be read in different orders or combinations.
+I propose a system of graphic notation for both instrument and electronics with the capability to combine realtime and non-realtime composition. This system relies on Pure Data's "data structures" for its graphical interface. This allows for both manual and automatic editing. This is to say that the composer can edit with the cursor each element, as lines or dots on a graphical canvas, like in other traditional graphic notation software (i.e., HighC). However, the graphical environment can be edited automatically or generated in realtime, either by constructing the algorithmia from within Pd, or by sending values via TCP/IP from other programs (e.g., Supercollider, MaxMSP, etc.) Furthermore, scores can be edited and stored for further use, for example, as in a generation of a database of scores which can be read in different orders or combinations.
 
 This project is primarily meant for mixed media, but it can easily be used for acousmatic music. At heart, this graphical interface attempts to bridge instrumental and electronic notation. In general, electronic instrument notation is essentially parametric. Thus, by rendering parametric scores for performers, the notational gap is reduced, and in compositional terms this means more connection between the sonic ideas and their performativity. By doing this, I attempt to distill some of the bagage traditional notation presents to performances and to composition, in order to bring closer the sonic and gestural worlds of speakers and instruments. When working for playes, thus, scores can be sent to different computers in a network (TCP/IP type of connections), or to different screens connected to the same computer, and the electronic instruments can also receive and read the score.
 
@@ -21,6 +22,8 @@ One of the major advantages this system pushes forward is the live score generat
 [Puredata](http://msp.ucsd.edu)
 
 [Scorify](https://github.com/fdch/scorify)
+
+## Screenshot
 
 ![screenshot](https://raw.githubusercontent.com/fdch/scorify/master/paper/screenshot.png)
 
